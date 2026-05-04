@@ -1,26 +1,88 @@
 @import "tailwindcss";
+@import "@heroui/styles";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #180E03;
+  --foreground: #FFFFFF;
+  --primary-text-color: linear-gradient(to right, #C29226, #B27D0F, #D9B14A, #FADE7B, #DAB74F, #C7972B);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter);
+}
+
+.section-frame {
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
+  padding: 0 1rem;
+  margin: auto;
+}
+
+.section-gradient-heading {
+  /* Fallback color for older browsers */
+  color: #fff;
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 1.2;
+
+  /* Apply the linear gradient as a background image */
+  background-image: var(--primary-text-color);
+
+  /* Clip the background to the text area */
+  background-clip: text;
+  -webkit-background-clip: text;
+  /* For WebKit browsers */
+
+  /* Make the text color transparent to reveal the background */
+  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+  /* For WebKit browsers */
+  width: fit-content;
+
+  @media screen and (min-width:768px) and (max-width:1023px) {
+    font-size: 32px;
+  }
+
+  @media screen and (max-width:767px) {
+    font-size: 22px;
+  }
+}
+
+.section-content-title {
+  font-weight: 700;
+  font-size: 32px;
+  color: #fff;
+  text-transform: capitalize;
+  line-height: 1.2;
+}
+
+.section-content-title span {
+
+  /* Apply the linear gradient as a background image */
+  background-image: var(--primary-text-color);
+
+  /* Clip the background to the text area */
+  background-clip: text;
+  -webkit-background-clip: text;
+  /* For WebKit browsers */
+
+  /* Make the text color transparent to reveal the background */
+  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+  /* For WebKit browsers */
+  width: fit-content;
+}
+
+.dollar-img {
+  width: 24px;
+  height: 33px;
+}
+
+.section-content-title-wrapper {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }

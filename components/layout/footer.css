@@ -1,0 +1,97 @@
+footer {
+    display: flex;
+    padding: 3rem 0;
+}
+
+.footer-col {
+    flex: 1;
+
+    &:nth-child(1) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    &:nth-child(2),
+    &:nth-child(3) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    &:nth-child(3) {
+        h4 {
+            min-width: 217px;
+        }
+
+    }
+}
+
+.footer-col h4 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.footer-col ul {
+    min-width: 132px;
+}
+
+.footer-col ul li {
+    margin-bottom: 1rem;
+}
+
+.footer-logo-img {
+    width: 125px;
+    height: 105px;
+}
+
+.footer-about {
+    max-width: 323px;
+    margin: 1rem 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.footer-connect-line-wrap {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-connect-line-text {
+    /* Apply the linear gradient as a background image */
+    background-image: var(--primary-text-color);
+
+    /* Clip the background to the text area */
+    background-clip: text;
+    -webkit-background-clip: text;
+    /* For WebKit browsers */
+
+    /* Make the text color transparent to reveal the background */
+    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+    /* For WebKit browsers */
+    width: fit-content;
+
+    font-weight: 500;
+}
+
+.footer-bottom {
+    height: 30px;
+    background-image: linear-gradient(to right, #C7972B, #DAB74F, #D9B14A, #B37F11, #DAB74F, #B27D0F, #C29226);
+}
+
+.footer-bottom-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.footer-bottom-text {
+    font-size: 10px;
+    font-weight: 700;
+}

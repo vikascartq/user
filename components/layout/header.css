@@ -1,0 +1,154 @@
+.app-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 40px;
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+.app-header.scrolled {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.app-header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Desktop Nav */
+.nav-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-container ul {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+}
+
+.nav-container a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* Hide hamburger on desktop */
+.hamburger {
+    display: none;
+}
+
+.mobile-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.logo img {
+    width: 102px;
+    height: 86px;
+}
+
+.mobile-btn.desktop-only {
+    display: none;
+
+    @media screen and (min-width:1081px) {
+        display: flex;
+    }
+}
+
+/* ---------------- MOBILE ---------------- */
+@media (max-width: 1080px) {
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        z-index: 200;
+    }
+
+    .logo {
+        z-index: 200;
+
+    }
+
+    .hamburger span {
+        width: 25px;
+        height: 3px;
+        background: #fff;
+        transition: all 0.3s ease;
+    }
+
+    /* Animate to X */
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    /* Dropdown menu */
+    .nav-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+
+        background: #000;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        transform: translateY(-100%);
+        opacity: 0;
+        transition: all 0.4s ease;
+        z-index: 150;
+    }
+
+    .nav-container.open {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .nav-container ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .nav-container ul li a {
+        font-size: 20px;
+    }
+
+    .mobile-btn {
+        margin-top: 30px;
+        width: 80%;
+    }
+
+    .mobile-btn button {
+        width: 100%;
+    }
+}

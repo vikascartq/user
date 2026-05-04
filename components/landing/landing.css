@@ -1,0 +1,154 @@
+/* hero section */
+
+.section-base-bg {
+    background-image: url("/section-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    max-height: 700px;
+    display: flex;
+    /* flex-direction: column; */
+}
+
+.hero-section-base {
+    background-image: url("/landing-hero-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    max-height: 700px;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-content-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 829px;
+}
+
+.hero-title {
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 32px;
+    text-transform: capitalize;
+}
+
+.hero-title.text-gradient {
+    background: transparent;
+    /* Fallback color for older browsers */
+    color: #fff;
+    line-height: 1.2;
+
+    /* Apply the linear gradient as a background image */
+    background-image: var(--primary-text-color);
+
+    /* Clip the background to the text area */
+    background-clip: text;
+    -webkit-background-clip: text;
+    /* For WebKit browsers */
+
+    /* Make the text color transparent to reveal the background */
+    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+    /* For WebKit browsers */
+    width: fit-content;
+}
+
+.hero-para {
+    font-weight: 400;
+    color: #FFFFFF;
+    font-size: 18px;
+    border-left: 1px solid #B49325;
+    padding-left: 1rem;
+    margin: 2rem 0;
+    line-height: 1.2;
+}
+
+.hero-btn-group {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.hero-bottom-wrapper {
+    border-top: 1px solid #C29226;
+    border-bottom: 1px solid #B27D0F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    gap: 1rem;
+}
+
+.hero-btm-line {
+    color: #21DB00;
+}
+
+.section-content-para {
+    text-align: justify;
+    margin-bottom: 1rem;
+}
+
+/* built section */
+
+.section-container__img-side .built-img {
+    width: 100%;
+}
+
+.section-container__img-side .work-with-img {
+    width: 100%;
+}
+
+.section-container__img-side .help-img {
+    width: 100%;
+    max-width: 497px;
+}
+
+.section-container__img-side .global-img {
+    width: 100%;
+}
+
+/* why choose us section */
+
+.why-choose-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.why-choose-para {
+    text-align: center;
+    font-size: 18px;
+}
+
+.why-choose-card-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.why-choose-card {
+    width: 100%;
+    max-width: 163px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.why-choose-card-title {
+    font-size: 16px;
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+.why-choose-card-desc {
+    font-size: 16px;
+    color: #FFFFFF;
+    font-weight: 300;
+}
