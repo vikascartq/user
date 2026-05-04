@@ -1,15 +1,5 @@
 /* hero section */
 
-.section-base-bg {
-    background-image: url("/section-bg.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    max-height: 700px;
-    display: flex;
-    /* flex-direction: column; */
-}
-
 .hero-section-base {
     background-image: url("/landing-hero-bg.png");
     background-repeat: no-repeat;

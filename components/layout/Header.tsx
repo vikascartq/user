@@ -47,7 +47,7 @@ export default function Header() {
                 <div className={`nav-container ${menuOpen ? "open" : ""}`}>
                     <ul>
                         <li><Link href="/">Home</Link></li>
-                        <li><Link href="/">About Us</Link></li>
+                        <li><Link href="/about-us">About Us</Link></li>
                         <li><Link href="/">Services</Link></li>
                         <li><Link href="/">Organization</Link></li>
                         <li><Link href="/">Job Seekers</Link></li>

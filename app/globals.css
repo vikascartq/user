@@ -86,3 +86,12 @@ body {
   gap: 1rem;
   margin-bottom: 1rem;
 }
+
+.section-base-bg {
+  background-image: url("/section-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  max-height: 700px;
+  display: flex;
+}

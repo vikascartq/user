@@ -1,0 +1,20 @@
+.tag-ui {
+    height: 40px;
+    min-width: 150px;
+    width: 100%;
+    max-width: 165px;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    background:
+        linear-gradient(#000, #000) padding-box,
+        /* Inner background color */
+        linear-gradient(to right, #C29226, #B27D0F, #D9B14A, #FADE7B, #DAB74F, #C7972B) border-box;
+    /* Border gradient */
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-weight: 400;
+}

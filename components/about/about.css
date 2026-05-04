@@ -1,0 +1,64 @@
+.about-hero-section-base {
+    background-image: url("/about/about-hero-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    max-height: 700px;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-content-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 829px;
+}
+
+.hero-title {
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 32px;
+    text-transform: capitalize;
+}
+
+.hero-title.text-gradient {
+    background: transparent;
+    /* Fallback color for older browsers */
+    color: #fff;
+    line-height: 1.2;
+
+    /* Apply the linear gradient as a background image */
+    background-image: var(--primary-text-color);
+
+    /* Clip the background to the text area */
+    background-clip: text;
+    -webkit-background-clip: text;
+    /* For WebKit browsers */
+
+    /* Make the text color transparent to reveal the background */
+    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+    /* For WebKit browsers */
+    width: fit-content;
+}
+
+.hero-para {
+    font-weight: 400;
+    color: #FFFFFF;
+    font-size: 18px;
+    border-left: 1px solid #B49325;
+    padding-left: 1rem;
+    margin: 2rem 0;
+    line-height: 1.2;
+}
+
+.professional-img {
+    max-width: 434px;
+}
+
+.what-makes-img {
+    width: 100%;
+    max-width: 554px;
+}
