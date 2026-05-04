@@ -12,6 +12,13 @@ export default function FinTech() {
                     <div>
                         <p className="why-choose-para">We enable fast-growing fintech companies with structured hiring, reliable talent access, and scalable workforce solutions designed to support long-term expansion.</p>
                     </div>
+                    <div className="why-choose-feat">
+                        <div className="why-choose-feat-text">Fintech Recruitment Advisory Experts</div>
+                        <div className="why-choose-feat-separator"></div>
+                        <div className="why-choose-feat-text">Dedicated Talent & Job Network</div>
+                        <div className="why-choose-feat-separator"></div>
+                        <div className="why-choose-feat-text">Complete Hiring Execution Partner</div>
+                    </div>
                 </div>
             </div>
         </div>

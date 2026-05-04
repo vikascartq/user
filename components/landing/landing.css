@@ -123,6 +123,8 @@
 .why-choose-para {
     text-align: center;
     font-size: 18px;
+    max-width: 760px;
+    margin: auto;
 }
 
 .why-choose-card-container {
@@ -151,4 +153,42 @@
     font-size: 16px;
     color: #FFFFFF;
     font-weight: 300;
+}
+
+.why-choose-feat {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.why-choose-feat-text {
+    background: transparent;
+    /* Fallback color for older browsers */
+    color: #fff;
+    line-height: 1.2;
+
+    /* Apply the linear gradient as a background image */
+    background-image: var(--primary-text-color);
+
+    /* Clip the background to the text area */
+    background-clip: text;
+    -webkit-background-clip: text;
+    /* For WebKit browsers */
+
+    /* Make the text color transparent to reveal the background */
+    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+    /* For WebKit browsers */
+    width: fit-content;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.why-choose-feat-separator {
+    width: 1px;
+    height: 40px;
+    background-color: #D4AF37;
 }
