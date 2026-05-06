@@ -1,0 +1,13 @@
+.service-card-box {
+    border: 1px solid transparent;
+    background:
+        linear-gradient(#000, #000) padding-box,
+        /* Inner background color */
+        linear-gradient(to right, #C29226, #B27D0F, #D9B14A, #FADE7B, #DAB74F, #C7972B) border-box;
+    /* Border gradient */
+    border-radius: 10px;
+    width: 100%;
+    max-width: 380px;
+    min-height: 545px;
+    padding: 1rem;
+}
