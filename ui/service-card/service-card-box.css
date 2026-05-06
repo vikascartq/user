@@ -7,7 +7,33 @@
     /* Border gradient */
     border-radius: 10px;
     width: 100%;
-    max-width: 380px;
+    max-width: 360px;
     min-height: 545px;
     padding: 1rem;
+}
+
+.service-card-box ul li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: .5rem;
+}
+
+.service-card-title {
+    font-weight: 600;
+    margin-bottom: .5rem;
+}
+
+.service-card-description {
+    font-weight: 300;
+    margin-bottom: .5rem;
+}
+
+.service-card-support-title {
+    font-weight: 300;
+    margin-bottom: .5rem;
+}
+
+.service-card-support-item {
+    font-weight: 300;
 }

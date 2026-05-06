@@ -2,7 +2,7 @@ import ServiceCardBox from "@/ui/service-card/ServiceCardBox"
 
 export default function ServiceCards() {
     return (
-        <div className="section-base-bg">
+        <div className="section-base-bg service-cards-section">
             <div className="section-frame">
                 <div className="service-cards-container">
                     {
@@ -47,6 +47,55 @@ const serviceCardsData = [
             "Documentation",
             "Ownership clarity",
             "Stronger HR operating rhythm"
+        ]
+    },
+    {
+        title: "People Strategy & Organisational Support",
+        description: "Align business growth with the right people structure",
+        supportTitle: "ReqKing supports :",
+        support: [
+            "Workforce planning",
+            "Organisation design thinking",
+            "Team-shape decisions",
+            "Leadership alignment",
+            "Role clarity",
+            "Practical people strategy that reflects commercial priorities"
+        ]
+    },
+    {
+        title: "Leadership, Performance & Culture",
+        description: "The focus is to reduce friction and improve accountability as the business scales.",
+        supportTitle: "Support include:",
+        support: [
+            "Stronger feedback culture",
+            "Better day-to-day people leadership",
+            "More effective performance conversations",
+            "Support managers and leaders with clearer expectations"
+        ]
+    },
+    {
+        title: "Employer Brand & Candidate Experience",
+        description: "Improve how the business is seen by talent and how candidates experience the hiring journey.",
+        supportTitle: "ReqKing supports :",
+        support: [
+            "Role messaging",
+            "Employer-positioning support",
+            "Process quality",
+            "Communication standards",
+            "Better alignment between brand promise and candidate reality."
+        ]
+    },
+    {
+        title: "Project & Advisory Support",
+        description: "Engagements are shaped around practical priorities, not generic HR packages.",
+        supportTitle: "Support include:",
+        support: [
+            "Expansion, hiring transformation",
+            "Process redesign",
+            "Retention challenges",
+            "Capability gaps",
+            "Leadership strain",
+            "People-function buildout"
         ]
     }
 ]

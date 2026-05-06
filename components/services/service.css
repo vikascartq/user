@@ -8,6 +8,11 @@
     flex-direction: column;
 }
 
+.service-cards-section {
+    height: auto;
+    max-height: none;
+}
+
 .hero-content-wrapper {
     height: 100%;
     display: flex;
