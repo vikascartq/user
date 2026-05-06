@@ -1,11 +1,13 @@
 "use client";
 import GoldenSection from "../golden-section/GoldenSection";
 import Built from "./Built";
+import Candidate from "./Candidate";
 import FinTech from "./FinTech1";
 import Global from "./Global";
 import Help from "./Help";
 import HeroSection from "./HeroSection";
 import "./landing.css";
+import Opportunity from "./Opportunity";
 import Testimonials from "./Testimonials";
 import WhyChoose from "./WhyChoose";
 import WorkWith from "./WorkWith.";
@@ -20,6 +22,8 @@ export default function LandingIndex() {
             <Global />
             <WhyChoose />
             <FinTech />
+            <Opportunity />
+            <Candidate />
             <Testimonials />
             <GoldenSection
                 title="Building Growth Is Easier with the Right People Behind It"

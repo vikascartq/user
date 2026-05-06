@@ -1,5 +1,7 @@
 @import "tailwindcss";
 @import "@heroui/styles";
+@import "swiper/css";
+@import "swiper/css/effect-coverflow";
 
 :root {
   --background: #180E03;

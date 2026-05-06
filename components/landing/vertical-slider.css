@@ -1,0 +1,33 @@
+.myVerticalSwiper {
+    height: 500px;
+    width: 100%;
+}
+
+.slide {
+    height: 150px;
+    background: #222;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+/* Default (top & bottom slides) */
+.swiper-slide {
+    transform: scale(0.8);
+    opacity: 0.6;
+}
+
+/* Center slide */
+.swiper-slide-active {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* Slightly bigger than others (optional polish) */
+.swiper-slide-prev,
+.swiper-slide-next {
+    transform: scale(0.85);
+}

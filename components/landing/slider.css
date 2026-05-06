@@ -1,0 +1,34 @@
+.mySwiper {
+    width: 100%;
+    padding: 50px 0;
+}
+
+.slide {
+    height: 250px;
+    background: #222;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+/* Default (side slides) */
+.swiper-slide {
+    transform: scale(0.8);
+    opacity: 0.6;
+}
+
+/* Active (center slide) */
+.swiper-slide-active {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* Optional: smooth depth feeling */
+.swiper-slide-prev,
+.swiper-slide-next {
+    transform: scale(0.85);
+    opacity: 0.6;
+}
