@@ -1,8 +1,9 @@
 import GoldenListDotIcon from "@/svg/GoldenListDotIcon";
 import "./service-card-box.css";
-export default function ServiceCardBox({ title, description, supportTitle, support }: ServiceCardBoxProps) {
+export default function ServiceCardBox({ title, description, supportTitle, support, icon }: ServiceCardBoxProps) {
     return (
         <div className="service-card-box">
+            {icon}
             <h4 className="service-card-title">{title}</h4>
             <p className="service-card-description">{description}</p>
             <div className="service-card-support-title">{supportTitle}</div>

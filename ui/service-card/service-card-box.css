@@ -22,11 +22,12 @@
 .service-card-title {
     font-weight: 600;
     margin-bottom: .5rem;
+    margin-top: .8rem;
 }
 
 .service-card-description {
     font-weight: 300;
-    margin-bottom: .5rem;
+    margin: 1rem 0;
 }
 
 .service-card-support-title {

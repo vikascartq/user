@@ -69,3 +69,66 @@
     gap: 2rem;
     padding: 2rem 0;
 }
+
+/* Choose Path */
+
+.choose-path-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.choose-path-para {
+    text-align: center;
+    font-size: 18px;
+    max-width: 760px;
+    margin: auto;
+}
+
+.choose-path-card-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.choose-path-card {
+    width: 100%;
+    max-width: 522px;
+    height: 300px;
+    border: 1px solid transparent;
+    background:
+        linear-gradient(#000, #000) padding-box,
+        /* Inner background color */
+        linear-gradient(to right, #C29226, #B27D0F, #D9B14A, #FADE7B, #DAB74F, #C7972B) border-box;
+    /* Border gradient */
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.choose-path-card>svg {
+    margin: auto;
+}
+
+.choose-path-card .button-action {
+    max-width: none;
+}
+
+.choose-path-card-title {
+    color: #FFFFFF;
+    font-weight: 600;
+    text-align: center;
+}
+
+.choose-path-card-para {
+    color: #FFFFFF;
+    font-weight: 300;
+    text-align: center;
+}
+
+.choose-path-card-divider {
+    background: linear-gradient(to right, #C29226, #B27D0F, #D9B14A, #FADE7B, #DAB74F, #C7972B) border-box;
+    height: 1px;
+    margin-bottom: .5rem;
+    margin-top: 2rem;
+}
