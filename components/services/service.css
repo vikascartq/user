@@ -3,7 +3,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-    max-height: 700px;
+    max-height: 520px;
     display: flex;
     flex-direction: column;
 }

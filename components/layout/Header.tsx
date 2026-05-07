@@ -49,7 +49,7 @@ export default function Header() {
                         <li><Link href="/">Home</Link></li>
                         <li><Link href="/about-us">About Us</Link></li>
                         <li><Link href="/services">Services</Link></li>
-                        <li><Link href="/">Organization</Link></li>
+                        <li><Link href="/organization">Organization</Link></li>
                         <li><Link href="/">Job Seekers</Link></li>
                         <li><Link href="/">Trends & Cases</Link></li>
                         <li><Link href="/">Contact us</Link></li>
