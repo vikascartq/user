@@ -62,3 +62,46 @@
     max-width: 760px;
     margin: auto;
 }
+
+.how-support-section-base {
+    height: auto;
+    max-height: none;
+    padding: 4rem 0;
+}
+
+.how-support-path-card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+
+    @media (max-width: 600px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.next-hire-container {
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    display: flex;
+}
+
+.next-hire-view-btn {
+    /* Apply the linear gradient as a background image */
+    background-image: var(--primary-text-color);
+
+    /* Clip the background to the text area */
+    background-clip: text;
+    -webkit-background-clip: text;
+    /* For WebKit browsers */
+
+    /* Make the text color transparent to reveal the background */
+    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+    /* For WebKit browsers */
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    cursor: pointer;
+}

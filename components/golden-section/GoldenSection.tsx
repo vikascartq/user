@@ -3,6 +3,7 @@ import "./golden-section.css";
 export default function GoldenSection({
     title,
     para,
+    para2,
     buttonText,
     onButtonClick
 }: GoldenSectionProp) {
@@ -17,6 +18,10 @@ export default function GoldenSection({
                         type={"dark"}
                         onClick={onButtonClick}
                     />
+                    {
+                        para2 &&
+                        <p>{para2}</p>
+                    }
                 </div>
             </div>
         </div>
@@ -26,6 +31,7 @@ export default function GoldenSection({
 interface GoldenSectionProp {
     title: string;
     para: string;
+    para2?: string;
     buttonText: string;
     onButtonClick: () => void;
 }

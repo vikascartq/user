@@ -14,6 +14,7 @@ export default function CoverflowSlider({ list, renderSlide }: CoverflowSliderPr
             autoplay={{
                 delay: 2000,
                 disableOnInteraction: false,
+                pauseOnMouseEnter: true,
             }}
             coverflowEffect={{
                 rotate: 0,
