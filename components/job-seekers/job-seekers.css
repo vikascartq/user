@@ -1,0 +1,205 @@
+.job-seekers-hero-section-base {
+    background-image: url("/job-seekers/job-seekers-hero-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    max-height: 590px;
+    display: flex;
+    flex-direction: column;
+}
+
+.job-seekers-hero-para {
+    font-weight: 400;
+    color: #FFFFFF;
+    font-size: 18px;
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+.hero-content-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 829px;
+}
+
+.hero-para-wrapper {
+    border-left: 1px solid #B49325;
+    padding-left: 1rem;
+    margin: 2rem 0;
+}
+
+.hero-btn-group {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+.support-section .section-container__img-side {
+    max-width: 427px;
+}
+
+.support-img {
+    max-width: 100%;
+}
+
+.support-section .section-container__content-side {
+    max-width: 697px;
+}
+
+.how-support-section-base {
+    height: auto;
+    max-height: none;
+    padding: 4rem 0;
+}
+
+.how-support-path-card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+
+    @media (max-width: 600px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.job-expert-container {
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.job-expert-para {
+    text-align: center;
+    max-width: 599px;
+}
+
+.job-expert-box-container {
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+    display: flex;
+    position: relative;
+    padding: 2rem 1rem;
+    border-radius: 10px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        background: linear-gradient(to bottom, #C29226, #B27D0F, #D9B14A, #FADE7B, #DAB74F, #C7972B);
+        width: 100%;
+        height: 100%;
+        opacity: 0.15;
+        border-radius: 10px;
+    }
+
+    width: 100%;
+}
+
+.job-expert-box-divider {
+    background: linear-gradient(to bottom, #C29226, #B27D0F, #D9B14A, #FADE7B, #DAB74F, #C7972B);
+    width: 1px;
+    height: 100%;
+}
+
+.job-expert-box {
+    max-width: 204px;
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+}
+
+.job-expert-box-title {
+    color: #FFFFFF;
+    font-weight: 700;
+}
+
+.job-expert-box-desc {
+    color: #FFFFFF;
+    font-weight: 400;
+}
+
+.who-this-feat-box {
+    border: 1px solid transparent;
+    background:
+        linear-gradient(#000, #000) padding-box,
+        /* Inner background color */
+        linear-gradient(to right, #C29226, #B27D0F, #D9B14A, #FADE7B, #DAB74F, #C7972B) border-box;
+    /* Border gradient */
+    border-radius: 10px;
+    height: 105px;
+    width: 100%;
+    max-width: 565px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0% 1rem;
+}
+
+.who-this-feat-box-title {
+    color: #FFFFFF;
+    font-weight: 600;
+    margin-bottom: .4rem;
+}
+
+.who-this-feat-box-para {
+    color: #FFFFFF;
+    font-weight: 300;
+}
+
+.who-this-feat-box-content {
+    width: calc(100% - 60px);
+}
+
+.next-hire-container {
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    display: flex;
+}
+
+.next-hire-view-btn {
+    /* Apply the linear gradient as a background image */
+    background-image: var(--primary-text-color);
+
+    /* Clip the background to the text area */
+    background-clip: text;
+    -webkit-background-clip: text;
+    /* For WebKit browsers */
+
+    /* Make the text color transparent to reveal the background */
+    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+    /* For WebKit browsers */
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    cursor: pointer;
+}
+
+.job-seeker-opportunity-section .feature-card {
+    height: 280px;
+}
+
+.job-seeker-opportunity-section .feature-card-tag-group {
+    height: auto;
+    padding: 1rem;
+    padding-bottom: 0%;
+}
+
+.job-seeker-opportunity-section .button-action {
+    max-width: none;
+}
+
+.job-seeker-opportunity-section .feature-card-btn-wrapper {
+    padding: 1rem;
+}

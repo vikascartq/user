@@ -18,6 +18,7 @@ export default function Opportunity() {
                                 location={opportunity.location}
                                 tags={opportunity.tags}
                                 onApply={() => { }}
+                                type="type1"
                             />
                         )}
                     />
