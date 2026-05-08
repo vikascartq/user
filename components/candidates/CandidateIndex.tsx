@@ -1,0 +1,19 @@
+"use client";
+
+import GoldenSection from "../golden-section/GoldenSection";
+import HeroSection from "./HeroSection";
+import "./candidates.css";
+
+export default function CandidateIndex() {
+    return (
+        <>
+            <HeroSection />
+            <GoldenSection
+                title=" Looking for Talent That Can Truly Add Value?"
+                para="ReqKing’s network is built around credible, high-performing professionals, not just active applicants searching for any next move. We stay connected with talent that is already delivering results across multi-asset trading, fintech, financial services, technology, operations, risk, payments, cyber security, data, and other specialist functions, giving businesses access to stronger profiles with greater long-term potential."
+                buttonText="Request specific talent support"
+                onButtonClick={() => ""}
+            />
+        </>
+    )
+}
