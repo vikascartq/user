@@ -1,9 +1,14 @@
 import GoldenArrowIcon from "@/svg/org/GoldenArrowIcon";
 import FeatureCard from "@/ui/feat-card/FeatureCard";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import CoverflowSlider from "./CoverFlowSlider";
 
 export default function Opportunity() {
+    const navigate = useRouter();
+    const handleView = () => {
+        navigate.push("/opportunities")
+    }
     return (
         <div className="section-base-bg job-seeker-opportunity-section">
             <div className="section-frame">
@@ -25,7 +30,7 @@ export default function Opportunity() {
                         )}
                     />
                     <div className="flex justify-center">
-                        <button type="button" className="next-hire-view-btn">View All <GoldenArrowIcon /></button>
+                        <button type="button" onClick={handleView} className="next-hire-view-btn">View All <GoldenArrowIcon /></button>
                     </div>
                 </div>
             </div>

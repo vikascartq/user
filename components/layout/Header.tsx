@@ -52,7 +52,7 @@ export default function Header() {
                         <li><Link href="/organization">Organization</Link></li>
                         <li><Link href="/job-seekers">Job Seekers</Link></li>
                         <li><Link href="/">Trends & Cases</Link></li>
-                        <li><Link href="/">Contact us</Link></li>
+                        <li><Link href="/contact-us">Contact us</Link></li>
                     </ul>
 
                     {

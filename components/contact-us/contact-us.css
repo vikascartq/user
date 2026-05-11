@@ -1,0 +1,229 @@
+.contact-hero-section-base {
+    background-image: url("/contact-us/contact-hero-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    max-height: 590px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-hero-para {
+    font-weight: 400;
+    color: #FFFFFF;
+    font-size: 18px;
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+.hero-content-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 829px;
+}
+
+.hero-para-wrapper {
+    border-left: 1px solid #B49325;
+    padding-left: 1rem;
+    margin: 2rem 0;
+}
+
+.hero-btn-group {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Contact info */
+.contact-info-card {
+    display: flex;
+    gap: 1rem;
+}
+
+.contact-info-card-title {
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+.contact-info-card-value {
+    color: #FFFFFF;
+    font-weight: 400;
+}
+
+.contact-details-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.contact-info-title {
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.contact-info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 1rem 0;
+    margin-bottom: 2rem;
+}
+
+.contact-details-base {
+    display: flex;
+    gap: 1rem;
+}
+
+.contact-form-section-base {
+    border: 1px solid transparent;
+    background:
+        linear-gradient(#000, #000) padding-box,
+        /* Inner background color */
+        linear-gradient(to right, #C29226, #B27D0F, #D9B14A, #FADE7B, #DAB74F, #C7972B) border-box;
+    /* Border gradient */
+    border-radius: 10px;
+    width: 100%;
+    max-width: 740px;
+    padding: 1.5rem;
+}
+
+.contact-form-tab-wrapper {
+    border: 1px solid transparent;
+    background:
+        linear-gradient(#000, #000) padding-box,
+        /* Inner background color */
+        linear-gradient(to right, #C29226, #B27D0F, #D9B14A, #FADE7B, #DAB74F, #C7972B) border-box;
+    /* Border gradient */
+    border-radius: 10px;
+    padding: 4px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-form-tab {
+    height: 60px;
+    width: 100%;
+    max-width: 216px;
+    /* Apply the linear gradient as a background image */
+    background-image: var(--primary-text-color);
+
+    /* Clip the background to the text area */
+    background-clip: text;
+    -webkit-background-clip: text;
+    /* For WebKit browsers */
+
+    /* Make the text color transparent to reveal the background */
+    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+    /* For WebKit browsers */
+    /* width: fit-content; */
+
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.contact-form-tab.active {
+    color: #000000;
+    background: linear-gradient(to right, #C29226, #B27D0F, #D9B14A, #FADE7B, #DAB74F, #C7972B);
+    /* Clip the background to the text area */
+    background-clip: unset;
+    -webkit-background-clip: unset;
+    /* For WebKit browsers */
+
+    /* Make the text color transparent to reveal the background */
+    text-fill-color: unset;
+    -webkit-text-fill-color: unset;
+    border-radius: 10px;
+}
+
+
+.general-inquiry-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.general-inquiry-form .button-action {
+    max-width: 100%;
+}
+
+.contact__select__trigger {
+    border: 1px solid transparent;
+    background:
+        linear-gradient(#000, #000) padding-box,
+        /* Inner background color */
+        linear-gradient(to right, #C29226, #B27D0F, #D9B14A, #FADE7B, #DAB74F, #C7972B) border-box;
+    /* Border gradient */
+    border-radius: 10px;
+    height: 58px;
+    margin-top: 8px;
+}
+
+.contact-form-section {
+    max-height: none;
+    height: auto;
+    padding: 4rem 0;
+}
+
+/* File Upload UI */
+.file-upload-container {
+    border: 1px solid transparent;
+    background:
+        linear-gradient(#000, #000) padding-box,
+        /* Inner background color */
+        linear-gradient(to right, #C29226, #B27D0F, #D9B14A, #FADE7B, #DAB74F, #C7972B) border-box;
+    /* Border gradient */
+    border-radius: 10px;
+    height: 165px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+}
+
+.file-upload-para1 {
+    color: #FFFFFF80;
+    font-weight: 500;
+}
+
+.file-upload-para2 {
+    color: #FFFFFF80;
+    font-weight: 300;
+}
+
+.file-upload-btn {
+    border: 1px solid transparent;
+    background:
+        linear-gradient(#000, #000) padding-box,
+        /* Inner background color */
+        linear-gradient(to right, #C29226, #B27D0F, #D9B14A, #FADE7B, #DAB74F, #C7972B) border-box;
+    /* Border gradient */
+    border-radius: 10px;
+    height: 45px;
+    width: 200px;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.file-upload-label {
+    margin-bottom: .5rem;
+}
+
+.file-upload-field {
+    width: 100%;
+}

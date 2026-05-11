@@ -1,0 +1,27 @@
+.input-field-wrap {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.input-field-wrap .input-field {
+    border: 1px solid transparent;
+    background:
+        linear-gradient(#000, #000) padding-box,
+        /* Inner background color */
+        linear-gradient(to right, #C29226, #B27D0F, #D9B14A, #FADE7B, #DAB74F, #C7972B) border-box;
+    /* Border gradient */
+    border-radius: 10px;
+    padding: 1rem;
+
+    &::placeholder {
+        color: #FFFFFF80;
+    }
+}
+
+.input-field-label-text {
+    color: #FFFFFF;
+    font-weight: 500;
+    margin-bottom: .5rem;
+    text-transform: capitalize;
+}

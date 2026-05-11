@@ -1,0 +1,123 @@
+.opportunities-hero-section-base {
+    background-image: url("/opportunities/opportunity-hero-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    max-height: 590px;
+    display: flex;
+    flex-direction: column;
+}
+
+.opportunities-hero-para {
+    font-weight: 400;
+    color: #FFFFFF;
+    font-size: 18px;
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+.hero-content-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 829px;
+}
+
+.hero-para-wrapper {
+    border-left: 1px solid #B49325;
+    padding-left: 1rem;
+    margin: 2rem 0;
+}
+
+.hero-btn-group {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+.opportunities-section-base {
+    height: auto;
+    max-height: none;
+    padding: 4rem 0;
+}
+
+.opportunities-section-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.opportunities-section-card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    place-items: center;
+
+    @media (max-width: 600px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.opportunities-section-base .feature-card {
+    height: 280px;
+}
+
+.opportunities-section-base .feature-card-tag-group {
+    height: auto;
+    padding: 1rem;
+    padding-bottom: 0%;
+}
+
+.opportunities-section-base .button-action {
+    max-width: none;
+}
+
+.opportunities-section-base .feature-card-btn-wrapper {
+    padding: 1rem;
+}
+
+/* filter */
+
+.opportunity-filter-base {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border: 1px solid transparent;
+    background:
+        linear-gradient(#000, #000) padding-box,
+        /* Inner background color */
+        linear-gradient(to right, #C29226, #B27D0F, #D9B14A, #FADE7B, #DAB74F, #C7972B) border-box;
+    /* Border gradient */
+    border-radius: 10px;
+    margin: 2rem 0;
+}
+
+.opportunity-filter-base .button-action {
+    max-width: 178px;
+}
+
+.opportunity-field-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+}
+
+.opportunity-field {
+    color: #FFFFFFB2;
+    width: 100%;
+    outline: none;
+}
+
+.opportunity-field-divider {
+    width: 1px;
+    /* background: linear-gradient(to right, #C29226, #B27D0F, #D9B14A, #FADE7B, #DAB74F, #C7972B); */
+    background: #735109;
+    height: 30px;
+    margin: 0 1rem;
+}
