@@ -1,0 +1,14 @@
+.trend-card {
+    width: 100%;
+    max-width: 370px;
+    height: 291px;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.trend-card-tag {
+    color: #21DB00;
+    font-weight: 700;
+    font-size: 18px;
+
+}

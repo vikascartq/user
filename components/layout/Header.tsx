@@ -51,7 +51,7 @@ export default function Header() {
                         <li><Link href="/services">Services</Link></li>
                         <li><Link href="/organization">Organization</Link></li>
                         <li><Link href="/job-seekers">Job Seekers</Link></li>
-                        <li><Link href="/">Trends & Cases</Link></li>
+                        <li><Link href="/case-studies">Trends & Cases</Link></li>
                         <li><Link href="/contact-us">Contact us</Link></li>
                     </ul>
 
