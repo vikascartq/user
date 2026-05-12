@@ -26,22 +26,22 @@ export default function Footer() {
                                     <Link href={"/"}>Home</Link>
                                 </li>
                                 <li>
-                                    <Link href={"/"}>About Us</Link>
+                                    <Link href={"/about-us"}>About Us</Link>
                                 </li>
                                 <li>
-                                    <Link href={"/"}>Job Seekers</Link>
+                                    <Link href={"/job-seekers"}>Job Seekers</Link>
                                 </li>
                                 <li>
-                                    <Link href={"/"}>Organization</Link>
+                                    <Link href={"/organization"}>Organization</Link>
                                 </li>
                                 <li>
-                                    <Link href={"/"}>Case Studies</Link>
+                                    <Link href={"/case-studies"}>Case Studies</Link>
                                 </li>
                                 <li>
-                                    <Link href={"/"}>Insights</Link>
+                                    <Link href={"/trend-and-cases"}>Insights</Link>
                                 </li>
                                 <li>
-                                    <Link href={"/"}>Contact us</Link>
+                                    <Link href={"/contact-us"}>Contact us</Link>
                                 </li>
                             </ul>
                         </div>
