@@ -1,0 +1,140 @@
+.case-study-hero-section-base {
+    background-image: url("/case-study/case-study-details-hero-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    max-height: 590px;
+    display: flex;
+    flex-direction: column;
+}
+
+.case-study-hero-para {
+    font-weight: 400;
+    color: #FFFFFF;
+    font-size: 18px;
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+.hero-para-wrapper {
+    border-left: 1px solid #B49325;
+    padding-left: 1rem;
+    margin: 2rem 0;
+}
+
+.hero-content-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 829px;
+}
+
+.case-study-details-section-base {
+    height: auto;
+    max-height: none;
+    padding: 4rem 0;
+}
+
+/* details */
+
+.case-details-container {
+    display: flex;
+    gap: 1rem;
+}
+
+.case-details-content {
+    flex: 1;
+    max-width: 800px;
+}
+
+.case-details-features {
+    flex: 1;
+    max-width: 365px;
+}
+
+/* Styled List Item */
+.styled-unordered-list-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.styled-unordered-separator {
+    background: #21DB00;
+    height: 1px;
+    width: 120px;
+}
+
+.styled-unordered-text {
+    color: #FFFFFF;
+    font-weight: 500;
+}
+
+/*  */
+.result-feat {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.result-feat-text {
+    background: transparent;
+    /* Fallback color for older browsers */
+    color: #fff;
+    line-height: 1.2;
+
+    /* Apply the linear gradient as a background image */
+    background-image: var(--primary-text-color);
+
+    /* Clip the background to the text area */
+    background-clip: text;
+    -webkit-background-clip: text;
+    /* For WebKit browsers */
+
+    /* Make the text color transparent to reveal the background */
+    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+    /* For WebKit browsers */
+    width: fit-content;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.result-feat-separator {
+    width: 1px;
+    height: 40px;
+    background-color: #D4AF37;
+}
+
+.result-feat-para {
+    text-align: center;
+    max-width: 150px;
+}
+
+.result-feat-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.result-feat-divider {
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(to right, #C29226, #B27D0F, #D9B14A, #FADE7B, #DAB74F, #C7972B, #C29226, #B27D0F, #D9B14A, #FADE7B, #DAB74F, #C7972B);
+}
+
+.case-details-premium-card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.case-details-para {
+    margin-bottom: 1rem;
+}

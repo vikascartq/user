@@ -1,0 +1,44 @@
+.case-study-hero-section-base {
+    background-image: url("/case-study/all-case-study-hero-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    max-height: 590px;
+    display: flex;
+    flex-direction: column;
+}
+
+.case-study-hero-para {
+    font-weight: 400;
+    color: #FFFFFF;
+    font-size: 18px;
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+.hero-para-wrapper {
+    border-left: 1px solid #B49325;
+    padding-left: 1rem;
+    margin: 2rem 0;
+}
+
+.hero-content-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 829px;
+}
+
+.all-case-studies-section-base {
+    height: auto;
+    max-height: none;
+    padding: 6rem 0;
+}
+
+.all-case-studies-card-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    display: grid;
+    margin: 2rem 0;
+}

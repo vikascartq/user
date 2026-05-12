@@ -1,18 +1,18 @@
 "use client";
 
 import GoldenSection from "../golden-section/GoldenSection";
-import "./case-studies.css";
-import CurrentTrends from "./CurrentTrends";
+import AllCaseStudies from "./AllCaseStudies";
 import HeroSection from "./HeroSection";
+import "./all-case-studies.css";
 export default function CaseStudiesIndex() {
     return (
         <>
             <HeroSection />
-            <CurrentTrends />
+            <AllCaseStudies />
             <GoldenSection
-                title="Insights That Support Better Hiring and Better Growth"
-                para="ReqKing shares practical insight for both businesses and professionals navigating fast-moving markets. From people strategy and hiring trends to talent movement, market direction, AI, data, and operational growth, our goal is to bring useful thinking that helps you make stronger decisions with more confidence."
-                buttonText="Reach us to know more"
+                title="Let’s Explore What Your Business Needs Next"
+                para="If your organisation is focused on strengthening talent, improving team structure, or supporting the next stage of growth, ReqKing can help you assess the situation with greater clarity. We work with businesses to understand the real requirement behind the brief and shape a practical approach that supports stronger hiring, stronger teams, and better long-term execution."
+                buttonText="Discuss Your Requirements"
                 onButtonClick={() => ""}
             />
         </>

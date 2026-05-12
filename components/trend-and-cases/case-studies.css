@@ -16,6 +16,12 @@
     margin-bottom: 8px;
 }
 
+.hero-para-wrapper {
+    border-left: 1px solid #B49325;
+    padding-left: 1rem;
+    margin: 2rem 0;
+}
+
 .hero-content-wrapper {
     height: 100%;
     display: flex;
@@ -27,7 +33,7 @@
 .current-trends-section-base {
     height: auto;
     max-height: none;
-    padding: 4rem 0;
+    padding: 6rem 0;
 }
 
 .next-hire-view-btn {
@@ -48,4 +54,11 @@
     align-items: center;
     gap: .5rem;
     cursor: pointer;
+}
+
+.current-trends-path-card-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    display: grid;
+    margin: 2rem 0;
 }

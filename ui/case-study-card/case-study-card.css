@@ -1,7 +1,7 @@
-.trend-card {
+.case-study-card {
     width: 100%;
     max-width: 370px;
-    height: 260px;
+    height: 350px;
     border-radius: 10px;
     padding: 1rem;
     border: 1px solid transparent;
@@ -12,32 +12,46 @@
     /* Border gradient */
 }
 
-.trend-card-tag {
+.case-study-card-tag {
     color: #21DB00;
     font-weight: 700;
     font-size: 18px;
 }
 
-.trend-card-title {
+.case-study-card-title {
     color: #FFFFFF;
     font-weight: 600;
     margin: .5rem 0;
 }
 
-.trend-card-para {
+.case-study-card-subtitle {
+    color: #FFFFFF;
+    font-weight: 500;
+    margin: .5rem 0;
+    font-size: 14px;
+}
+
+.case-study-card-para {
     color: #FFFFFF;
     font-weight: 300;
     line-height: 1.2;
 }
 
-.trend-card-divider {
+.case-study-card-para2 {
+    color: #FFFFFF;
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.case-study-card-divider {
     background: linear-gradient(to bottom, #C29226, #B27D0F, #D9B14A, #FADE7B, #DAB74F, #C7972B);
     width: 100%;
     height: 1px;
     margin: 1.5rem 0;
 }
 
-.trend-card-cta {
+.case-study-card-cta {
     /* Apply the linear gradient as a background image */
     background-image: var(--primary-text-color);
 
@@ -56,4 +70,9 @@
     gap: .5rem;
     cursor: pointer;
     font-weight: 600;
+}
+
+.case-study-card .button-action {
+    max-width: none;
+    cursor: pointer;
 }

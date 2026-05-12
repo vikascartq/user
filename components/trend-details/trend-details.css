@@ -1,0 +1,120 @@
+.trend-details-hero-section-base {
+    background-image: url("/trends/trend-details-hero-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    max-height: 590px;
+    display: flex;
+    flex-direction: column;
+}
+
+.trend-details-hero-para {
+    font-weight: 400;
+    color: #FFFFFF;
+    font-size: 18px;
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+.hero-para-wrapper {
+    border-left: 1px solid #B49325;
+    padding-left: 1rem;
+    margin: 2rem 0;
+}
+
+.hero-content-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 829px;
+}
+
+
+.case-details-premium-card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.trend-details-section-base {
+    height: auto;
+    max-height: none;
+    padding: 4rem 0;
+}
+
+/* details */
+
+.trend-details-container {
+    display: flex;
+    gap: 1rem;
+}
+
+.trend-details-content {
+    flex: 1;
+    max-width: 800px;
+}
+
+.trend-details-features {
+    flex: 1;
+    max-width: 365px;
+}
+
+.trend-details-content {
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        background: transparent;
+        /* Fallback color for older browsers */
+        color: #fff;
+        line-height: 1.2;
+
+        /* Apply the linear gradient as a background image */
+        background-image: var(--primary-text-color);
+
+        /* Clip the background to the text area */
+        background-clip: text;
+        -webkit-background-clip: text;
+        /* For WebKit browsers */
+
+        /* Make the text color transparent to reveal the background */
+        text-fill-color: transparent;
+        -webkit-text-fill-color: transparent;
+        /* For WebKit browsers */
+        width: fit-content;
+        font-weight: 600;
+        font-size: 20px;
+        margin-bottom: 1rem;
+    }
+}
+
+.trend-details-content p {
+    color: #FFFFFF;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.trend-details-content ul {
+    padding-left: 1rem;
+}
+
+.trend-details-content ul li {
+    margin-bottom: .5rem;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: -15px;
+        transform: translateY(-50%);
+        background-image: url("/golden-dot.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 8px;
+        height: 8px;
+    }
+}
