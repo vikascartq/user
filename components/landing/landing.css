@@ -23,6 +23,11 @@
     font-weight: 700;
     font-size: 32px;
     text-transform: capitalize;
+
+    @media screen and (max-width:767px) {
+        font-size: 22px;
+        line-height: 1.2;
+    }
 }
 
 .hero-title.text-gradient {
@@ -54,6 +59,11 @@
     padding-left: 1rem;
     margin: 2rem 0;
     line-height: 1.2;
+
+    @media screen and (max-width:767px) {
+        font-size: 14px;
+        line-height: 1.4;
+    }
 }
 
 .hero-btn-group {
@@ -74,11 +84,20 @@
 
 .hero-btm-line {
     color: #21DB00;
+    text-align: center;
+
+    @media screen and (max-width:767px) {
+        font-size: 14px;
+    }
 }
 
 .section-content-para {
     text-align: justify;
     margin-bottom: 1rem;
+
+    @media screen and (max-width:767px) {
+        font-size: 14px;
+    }
 }
 
 /* built section */
@@ -115,14 +134,24 @@
     font-size: 18px;
     max-width: 760px;
     margin: auto;
+
+    @media screen and (max-width:767px) {
+        font-size: 14px;
+    }
 }
 
 .why-choose-card-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    /* align-items: center; */
+    /* justify-content: space-between; */
     gap: 1rem;
     margin: 1rem 0;
+
+    @media screen and (max-width:767px) {
+        grid-template-columns: repeat(2, 1fr);
+        /* flex-direction: column; */
+    }
 }
 
 .why-choose-card {
@@ -143,6 +172,10 @@
     font-size: 16px;
     color: #FFFFFF;
     font-weight: 300;
+
+    @media screen and (max-width:767px) {
+        font-size: 14px;
+    }
 }
 
 .why-choose-feat {
@@ -151,6 +184,10 @@
     justify-content: space-between;
     gap: 1rem;
     margin: 1rem 0;
+
+    @media screen and (max-width:767px) {
+        flex-direction: column;
+    }
 }
 
 .why-choose-feat-text {
@@ -175,6 +212,10 @@
     font-size: 32px;
     font-weight: 700;
     text-align: center;
+
+    @media screen and (max-width:767px) {
+        font-size: 22px;
+    }
 }
 
 .why-choose-feat-separator {
@@ -243,11 +284,21 @@
 }
 
 .candidate-section .section-container__img-side {
+    width: 100%;
+    max-width: 780px;
+}
+
+.opportunity-section-base .section-container__img-side {
+    width: 100%;
     max-width: 780px;
 }
 
 .candidate-section .section-container__content-side {
     max-width: 339px;
+
+    @media screen and (max-width:767px) {
+        max-width: none;
+    }
 }
 
 .candidate-section .section-content-title-wrapper {}

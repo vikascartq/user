@@ -4,10 +4,18 @@
     gap: 3rem;
     display: flex;
     height: 100%;
+
+    @media screen and (max-width:767px) {
+        flex-direction: column;
+    }
 }
 
 .section-container.reversed-container {
     flex-direction: row-reverse;
+
+    @media screen and (max-width:767px) {
+        flex-direction: column;
+    }
 }
 
 .section-container__img-side {

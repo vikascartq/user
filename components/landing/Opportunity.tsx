@@ -8,7 +8,7 @@ import VerticalCoverflow from "./VerticalCoverflow";
 export default function Opportunity() {
     const { jobList } = useJobs();
     return (
-        <div className="section-base-bg">
+        <div className="section-base-bg opportunity-section-base">
             <SectionFrame
                 type={"reverse"}
                 imgNode={

@@ -1,6 +1,12 @@
 .myVerticalSwiper {
-    height: 500px;
     width: 100%;
+    height: 500px;
+}
+
+@media (max-width: 768px) {
+    .myVerticalSwiper {
+        height: 300px;
+    }
 }
 
 .slide {

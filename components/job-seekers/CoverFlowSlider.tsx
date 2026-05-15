@@ -24,6 +24,35 @@ export default function CoverflowSlider({ list, renderSlide }: CoverflowSliderPr
                 modifier: 1.5, // intensity
                 slideShadows: false,
             }}
+            breakpoints={{
+                0: {
+                    direction: "horizontal",
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                    coverflowEffect: {
+                        depth: 80,
+                        modifier: 1,
+                    },
+                },
+                640: {
+                    direction: "horizontal",
+                    slidesPerView: 2,
+                    spaceBetween: 15,
+                    coverflowEffect: {
+                        depth: 100,
+                        modifier: 1.5,
+                    },
+                },
+                1024: {
+                    direction: "horizontal",
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                    coverflowEffect: {
+                        depth: 150,
+                        modifier: 2.5,
+                    },
+                },
+            }}
             modules={[EffectCoverflow, Autoplay]}
             className="mySwiper"
         >

@@ -64,3 +64,9 @@
 .button-action:disabled {
     filter: grayscale(1);
 }
+
+.button-action span {
+    @media screen and (max-width:767px) {
+        font-size: 14px;
+    }
+}

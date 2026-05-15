@@ -26,6 +26,8 @@ export default function Header() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+    const handleClose = () => setMenuOpen(false);
+
     return (
         <header className={`app-header ${scrolled ? "scrolled" : ""}`}>
             <div className="app-header-container">
@@ -46,13 +48,13 @@ export default function Header() {
 
                 <div className={`nav-container ${menuOpen ? "open" : ""}`}>
                     <ul>
-                        <li><Link href="/">Home</Link></li>
-                        <li><Link href="/about-us">About Us</Link></li>
-                        <li><Link href="/services">Services</Link></li>
-                        <li><Link href="/organization">Organization</Link></li>
-                        <li><Link href="/job-seekers">Job Seekers</Link></li>
-                        <li><Link href="/trend-and-cases">Trends & Cases</Link></li>
-                        <li><Link href="/contact-us">Contact us</Link></li>
+                        <li><Link onClick={handleClose} href="/">Home</Link></li>
+                        <li><Link onClick={handleClose} href="/about-us">About Us</Link></li>
+                        <li><Link onClick={handleClose} href="/services">Services</Link></li>
+                        <li><Link onClick={handleClose} href="/organization">Organization</Link></li>
+                        <li><Link onClick={handleClose} href="/job-seekers">Job Seekers</Link></li>
+                        <li><Link onClick={handleClose} href="/trend-and-cases">Trends & Cases</Link></li>
+                        <li><Link onClick={handleClose} href="/contact-us">Contact us</Link></li>
                     </ul>
 
                     {

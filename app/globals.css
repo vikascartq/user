@@ -21,6 +21,10 @@ body {
   max-width: 1200px;
   padding: 0 1rem;
   margin: auto;
+
+  @media screen and (max-width:767px) {
+    padding: 4rem 1rem;
+  }
 }
 
 .section-gradient-heading {
@@ -59,6 +63,10 @@ body {
   color: #fff;
   text-transform: capitalize;
   line-height: 1.2;
+
+  @media screen and (max-width:767px) {
+    font-size: 22px;
+  }
 }
 
 .section-content-title span {
@@ -81,6 +89,11 @@ body {
 .dollar-img {
   width: 24px;
   height: 33px;
+
+  @media screen and (max-width:767px) {
+    width: 18px;
+    height: 24px;
+  }
 }
 
 .section-content-title-wrapper {
@@ -96,6 +109,11 @@ body {
   height: 100vh;
   max-height: 700px;
   display: flex;
+
+  @media screen and (max-width:767px) {
+    height: auto;
+    max-height: none;
+  }
 }
 
 .form-field-group {
@@ -103,6 +121,10 @@ body {
   align-items: center;
   gap: 1rem;
   margin: 4px 0;
+
+  @media screen and (max-width:767px) {
+    flex-direction: column;
+  }
 }
 
 /* Chrome, Safari, Edge, Opera */

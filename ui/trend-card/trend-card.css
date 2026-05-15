@@ -28,6 +28,10 @@
     color: #FFFFFF;
     font-weight: 300;
     line-height: 1.2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
 }
 
 .trend-card-divider {
