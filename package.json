@@ -11,11 +11,14 @@
   "dependencies": {
     "@heroui/react": "^3.0.3",
     "@heroui/styles": "^3.0.3",
+    "axios": "^1.16.1",
+    "formik": "^2.4.9",
     "next": "16.2.4",
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "react-drag-drop-files": "^3.1.0",
-    "swiper": "^12.1.4"
+    "swiper": "^12.1.4",
+    "yup": "^1.7.1"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

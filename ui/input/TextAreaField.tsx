@@ -1,10 +1,12 @@
+import { ChangeEventHandler } from "react";
 
 export default function TextAreaField({
     id,
     label,
     placeholder,
     onChange,
-    rows
+    rows,
+    value
 }: TextAreaFieldProp) {
     return (
         <div className="input-field-wrap">
@@ -12,6 +14,7 @@ export default function TextAreaField({
             <textarea
                 id={id}
                 name={id}
+                value={value}
                 placeholder={placeholder}
                 className="input-field"
                 onChange={onChange}
@@ -26,6 +29,7 @@ interface TextAreaFieldProp {
     id: string;
     placeholder: string;
     label: string;
-    onChange: () => void;
+    onChange: ChangeEventHandler<HTMLTextAreaElement, HTMLTextAreaElement> | undefined;
     rows: number;
+    value: string;
 }

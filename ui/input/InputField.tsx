@@ -1,3 +1,4 @@
+import { ChangeEventHandler } from "react";
 import "./input-field.css";
 
 export default function InputField({
@@ -5,7 +6,8 @@ export default function InputField({
     label,
     placeholder,
     onChange,
-    type
+    type,
+    value
 }: InputFieldProp) {
     return (
         <div className="input-field-wrap">
@@ -14,6 +16,7 @@ export default function InputField({
                 type={type}
                 id={id}
                 name={id}
+                value={value}
                 placeholder={placeholder}
                 className="input-field"
                 onChange={onChange}
@@ -27,6 +30,7 @@ interface InputFieldProp {
     id: string;
     placeholder: string;
     label: string;
-    onChange: () => void;
+    onChange: ChangeEventHandler<HTMLInputElement, HTMLInputElement> | undefined;
     type: "text" | "email" | "number";
+    value: string;
 }

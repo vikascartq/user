@@ -1,3 +1,4 @@
+import useCandidate from "@/hooks/useCandidate";
 import ButtonAction from "@/ui/buttons/ButtonAction";
 import CandidateCard from "@/ui/candidate-card/CandidateCard";
 import SectionFrame from "@/ui/section/SectionFrame";
@@ -5,19 +6,22 @@ import Image from "next/image";
 import CoverflowSlider from "./CoverflowSlider";
 
 export default function Candidate() {
+    const { candidateList } = useCandidate();
     return (
         <div className="section-base-bg candidate-section">
             <SectionFrame
                 type={"reverse"}
                 imgNode={
+                    candidateList.length > 0 &&
                     <CoverflowSlider
-                        list={candidates}
+                        list={candidateList}
                         renderSlide={(candidate) => (
                             <CandidateCard
-                                title={candidate.title}
-                                description={candidate.description}
-                                tags={candidate.tags}
+                                title={candidate?.role}
+                                description={candidate?.description}
+                                tags={candidate?.skills}
                                 onContact={() => { }}
+                                imageName={candidate?.imageName}
                             />
                         )}
                     />
@@ -43,35 +47,35 @@ export default function Candidate() {
     )
 }
 
-const candidates = [
-    {
-        title: "John Doe",
-        description: "Experienced Software Engineer with a strong background in fintech and a proven track record of delivering high-quality solutions.",
-        tags: ["Sales", "Forex", "Client relations", "Negotiation"]
-    },
-    {
-        title: "Jane Smith",
-        description: "Skilled Financial Analyst with expertise in risk management and data analysis.",
-        tags: ["Sales", "Forex", "Client relations", "Negotiation"]
-    },
-    {
-        title: "FX Sales Specialist",
-        description: "10+ years experience in instutional forex sales with a proven track record of exceeding targets.",
-        tags: ["Sales", "Forex", "Client relations", "Negotiation"]
-    },
-    {
-        title: "Jane Foe",
-        description: "Skilled Financial Analyst with expertise in risk management and data analysis.",
-        tags: ["Sales", "Forex", "Client relations", "Negotiation"]
-    },
-    {
-        title: "Jane Doe",
-        description: "Skilled Financial Analyst with expertise in risk management and data analysis.",
-        tags: ["Sales", "Forex", "Client relations", "Negotiation"]
-    },
-    {
-        title: "Jane Smith jr",
-        description: "Skilled Financial Analyst with expertise in risk management and data analysis.",
-        tags: ["Sales", "Forex", "Client relations", "Negotiation"]
-    }
-];
+// const candidates = [
+//     {
+//         title: "John Doe",
+//         description: "Experienced Software Engineer with a strong background in fintech and a proven track record of delivering high-quality solutions.",
+//         tags: ["Sales", "Forex", "Client relations", "Negotiation"]
+//     },
+//     {
+//         title: "Jane Smith",
+//         description: "Skilled Financial Analyst with expertise in risk management and data analysis.",
+//         tags: ["Sales", "Forex", "Client relations", "Negotiation"]
+//     },
+//     {
+//         title: "FX Sales Specialist",
+//         description: "10+ years experience in instutional forex sales with a proven track record of exceeding targets.",
+//         tags: ["Sales", "Forex", "Client relations", "Negotiation"]
+//     },
+//     {
+//         title: "Jane Foe",
+//         description: "Skilled Financial Analyst with expertise in risk management and data analysis.",
+//         tags: ["Sales", "Forex", "Client relations", "Negotiation"]
+//     },
+//     {
+//         title: "Jane Doe",
+//         description: "Skilled Financial Analyst with expertise in risk management and data analysis.",
+//         tags: ["Sales", "Forex", "Client relations", "Negotiation"]
+//     },
+//     {
+//         title: "Jane Smith jr",
+//         description: "Skilled Financial Analyst with expertise in risk management and data analysis.",
+//         tags: ["Sales", "Forex", "Client relations", "Negotiation"]
+//     }
+// ];

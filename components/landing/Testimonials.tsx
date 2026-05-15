@@ -1,6 +1,8 @@
+import useTestimonial from "@/hooks/useTestimonial";
 import QuoteIcon from "@/svg/QuoteIcon";
 import Image from "next/image";
 export default function Testimonials() {
+    const { testimonialList } = useTestimonial()
     return (
         <div className="section-base-bg">
             <div className="section-frame">
@@ -14,12 +16,12 @@ export default function Testimonials() {
                     </div>
                     <div className="testimonials-container-wrapper">
                         <div className="testimonials-container">
-                            {testimonialsData.map((testimonial, index) => (
+                            {testimonialList.map((testimonial, index) => (
                                 <TestimonialCard
                                     key={index}
-                                    title={testimonial.title}
-                                    company={testimonial.company}
-                                    testimonial={testimonial.testimonial}
+                                    title={testimonial.role}
+                                    company={testimonial.name}
+                                    testimonial={testimonial.description}
                                 />
                             ))}
                         </div>
@@ -48,30 +50,30 @@ function TestimonialCard({ title, company, testimonial }: { title: string, compa
 }
 
 
-const testimonialsData = [
-    {
-        title: "Hiring Manager",
-        company: "Stonebridge Recruitment",
-        testimonial: "Reqking understands hiring needs with great clarity and consistently delivers candidates who align with both skill requirements and company culture. Their structured process and quick turnaround have made our recruitment more efficient and dependable."
-    },
-    {
-        title: "Performance Marketing Specialist",
-        company: "Forex Industry",
-        testimonial: "Getting hired through Reqking was a great experience. The process was professional, efficient, and transparent, and I felt supported at every stage, which made a lasting positive impression."
-    },
-    {
-        title: "Senior QA Engineer",
-        company: "TestSphere Ltd",
-        testimonial: "Reqking combines strong industry expertise with clear communication. Their ability to understand both company needs and candidate expectations ensures the right fit every time."
-    },
-    {
-        title: "Founder",
-        company: "Fintech Startup",
-        testimonial: "Reqking played a key role in helping us scale our team during a critical growth phase. Their ability to identify quality talent quickly, while maintaining transparency and efficiency, makes them stand out as a strong hiring partner."
-    },
-    {
-        title: "HR Head  ",
-        company: "Global Trading Company",
-        testimonial: "Working with Reqking has significantly improved our hiring process. Their strong screening approach and industry understanding ensure we only connect with highly relevant candidates, saving time and improving overall hiring outcomes."
-    }
-]
+// const testimonialsData = [
+//     {
+//         title: "Hiring Manager",
+//         company: "Stonebridge Recruitment",
+//         testimonial: "Reqking understands hiring needs with great clarity and consistently delivers candidates who align with both skill requirements and company culture. Their structured process and quick turnaround have made our recruitment more efficient and dependable."
+//     },
+//     {
+//         title: "Performance Marketing Specialist",
+//         company: "Forex Industry",
+//         testimonial: "Getting hired through Reqking was a great experience. The process was professional, efficient, and transparent, and I felt supported at every stage, which made a lasting positive impression."
+//     },
+//     {
+//         title: "Senior QA Engineer",
+//         company: "TestSphere Ltd",
+//         testimonial: "Reqking combines strong industry expertise with clear communication. Their ability to understand both company needs and candidate expectations ensures the right fit every time."
+//     },
+//     {
+//         title: "Founder",
+//         company: "Fintech Startup",
+//         testimonial: "Reqking played a key role in helping us scale our team during a critical growth phase. Their ability to identify quality talent quickly, while maintaining transparency and efficiency, makes them stand out as a strong hiring partner."
+//     },
+//     {
+//         title: "HR Head  ",
+//         company: "Global Trading Company",
+//         testimonial: "Working with Reqking has significantly improved our hiring process. Their strong screening approach and industry understanding ensure we only connect with highly relevant candidates, saving time and improving overall hiring outcomes."
+//     }
+// ]

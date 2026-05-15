@@ -1,5 +1,6 @@
 "use client";
 
+import { IJobList } from "@/hooks/useJobs";
 import { Autoplay, EffectCoverflow } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "./slider.css";
@@ -36,10 +37,6 @@ export default function CoverflowSlider({ list, renderSlide }: CoverflowSliderPr
 }
 
 interface CoverflowSliderProps {
-    list: {
-        title: string;
-        location: string;
-        tags: string[];
-    }[];
-    renderSlide: (item: { title: string; location: string; tags: string[] }) => React.ReactNode;
+    list: IJobList[];
+    renderSlide: (item: IJobList) => React.ReactNode;
 }

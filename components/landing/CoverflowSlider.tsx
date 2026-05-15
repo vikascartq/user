@@ -1,5 +1,6 @@
 "use client";
 
+import { ICandidateList } from "@/hooks/useCandidate";
 import { Autoplay, EffectCoverflow } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "./slider.css";
@@ -36,10 +37,15 @@ export default function CoverflowSlider({ list, renderSlide }: CoverflowSliderPr
 }
 
 interface CoverflowSliderProps {
-    list: {
-        title: string;
-        description: string;
-        tags: string[];
-    }[];
-    renderSlide: (item: { title: string; description: string; tags: string[] }) => React.ReactNode;
+    list: ICandidateList[];
+    renderSlide: (item: ICandidateList) => React.ReactNode;
 }
+
+// interface CoverflowSliderProps {
+//     list: {
+//         title: string;
+//         description: string;
+//         tags: string[];
+//     }[];
+//     renderSlide: (item: { title: string; description: string; tags: string[] }) => React.ReactNode;
+// }

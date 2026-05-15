@@ -1,3 +1,4 @@
+import useJobs from "@/hooks/useJobs";
 import ButtonAction from "@/ui/buttons/ButtonAction";
 import FeatureCard from "@/ui/feat-card/FeatureCard";
 import SectionFrame from "@/ui/section/SectionFrame";
@@ -5,18 +6,20 @@ import Image from "next/image";
 import VerticalCoverflow from "./VerticalCoverflow";
 
 export default function Opportunity() {
+    const { jobList } = useJobs();
     return (
         <div className="section-base-bg">
             <SectionFrame
                 type={"reverse"}
                 imgNode={
+                    jobList.length > 0 &&
                     <VerticalCoverflow
-                        list={opportunities}
+                        list={jobList}
                         renderSlide={(opportunity) => (
                             <FeatureCard
-                                title={opportunity.title}
+                                title={opportunity.name}
                                 location={opportunity.location}
-                                tags={opportunity.tags}
+                                tags={opportunity.skills}
                                 onApply={() => { }}
                                 type="type1"
                             />
@@ -44,35 +47,35 @@ export default function Opportunity() {
 }
 
 
-const opportunities = [
-    {
-        title: "Compilance Officer (CFD)",
-        location: "Dubai",
-        tags: ["Business Development", "Leadership", "100 FTD's/month", "Trading volume Lots: 4k/month", "Trading", " Book size: 2M"]
-    },
-    {
-        title: "Senior FX Trader",
-        location: "Dubai",
-        tags: ["Business Development", "Leadership", "100 FTD's/month", "Trading volume Lots: 4k/month", "Trading", " Book size: 2M"]
-    },
-    {
-        title: "Oil Market Analyst",
-        location: "Dubai",
-        tags: ["Business Development", "Leadership", "100 FTD's/month", "Trading volume Lots: 4k/month", "Trading", " Book size: 2M"]
-    },
-    {
-        title: "Compilance Officer (CFD)",
-        location: "Dubai",
-        tags: ["Business Development", "Leadership", "100 FTD's/month", "Trading volume Lots: 4k/month", "Trading", " Book size: 2M"]
-    },
-    {
-        title: "Senior FX Trader",
-        location: "Dubai",
-        tags: ["Business Development", "Leadership", "100 FTD's/month", "Trading volume Lots: 4k/month", "Trading", " Book size: 2M"]
-    },
-    {
-        title: "Oil Market Analyst",
-        location: "Dubai",
-        tags: ["Business Development", "Leadership", "100 FTD's/month", "Trading volume Lots: 4k/month", "Trading", " Book size: 2M"]
-    }
-]
+// const opportunities = [
+//     {
+//         title: "Compilance Officer (CFD)",
+//         location: "Dubai",
+//         tags: ["Business Development", "Leadership", "100 FTD's/month", "Trading volume Lots: 4k/month", "Trading", " Book size: 2M"]
+//     },
+//     {
+//         title: "Senior FX Trader",
+//         location: "Dubai",
+//         tags: ["Business Development", "Leadership", "100 FTD's/month", "Trading volume Lots: 4k/month", "Trading", " Book size: 2M"]
+//     },
+//     {
+//         title: "Oil Market Analyst",
+//         location: "Dubai",
+//         tags: ["Business Development", "Leadership", "100 FTD's/month", "Trading volume Lots: 4k/month", "Trading", " Book size: 2M"]
+//     },
+//     {
+//         title: "Compilance Officer (CFD)",
+//         location: "Dubai",
+//         tags: ["Business Development", "Leadership", "100 FTD's/month", "Trading volume Lots: 4k/month", "Trading", " Book size: 2M"]
+//     },
+//     {
+//         title: "Senior FX Trader",
+//         location: "Dubai",
+//         tags: ["Business Development", "Leadership", "100 FTD's/month", "Trading volume Lots: 4k/month", "Trading", " Book size: 2M"]
+//     },
+//     {
+//         title: "Oil Market Analyst",
+//         location: "Dubai",
+//         tags: ["Business Development", "Leadership", "100 FTD's/month", "Trading volume Lots: 4k/month", "Trading", " Book size: 2M"]
+//     }
+// ]

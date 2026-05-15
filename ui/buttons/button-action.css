@@ -8,6 +8,7 @@
     text-transform: capitalize;
     font-size: 16px;
     padding: 0% 1rem;
+    cursor: pointer;
 }
 
 .button-action.primary-cta {
@@ -58,4 +59,8 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
+}
+
+.button-action:disabled {
+    filter: grayscale(1);
 }

@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 
+import { IJobList } from "@/hooks/useJobs";
 import "./vertical-slider.css";
 
 export default function VerticalCoverflow({ list, renderSlide }: VerticalCoverFlowProps) {
@@ -45,10 +46,6 @@ export default function VerticalCoverflow({ list, renderSlide }: VerticalCoverFl
 }
 
 interface VerticalCoverFlowProps {
-    list: {
-        title: string;
-        location: string;
-        tags: string[];
-    }[];
-    renderSlide: (item: { title: string; location: string; tags: string[] }) => React.ReactNode;
+    list: IJobList[];
+    renderSlide: (item: IJobList) => React.ReactNode;
 }

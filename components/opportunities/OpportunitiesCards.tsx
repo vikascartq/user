@@ -1,7 +1,9 @@
-import FeatureCard from "@/ui/feat-card/FeatureCard"
-import OpportunitiesFilter from "./OpportunitiesFilter"
+import useJobs from "@/hooks/useJobs";
+import FeatureCard from "@/ui/feat-card/FeatureCard";
+import OpportunitiesFilter from "./OpportunitiesFilter";
 
 export default function OpportunitiesCards() {
+    const { jobList } = useJobs();
     return (
         <div className="section-base-bg opportunities-section-base">
             <div className="section-frame">
@@ -16,12 +18,12 @@ export default function OpportunitiesCards() {
                     <OpportunitiesFilter />
                     <div className="opportunities-section-card-wrapper">
                         {
-                            opportunities.map((opportunity, i) => (
+                            jobList.map((opportunity, i) => (
                                 <FeatureCard
                                     key={`opportunity-${i + 1}`}
-                                    title={opportunity.title}
+                                    title={opportunity.name}
                                     location={opportunity.location}
-                                    tags={opportunity.tags}
+                                    tags={opportunity.skills}
                                     onApply={() => { }}
                                     type="type2"
                                 />
@@ -34,35 +36,35 @@ export default function OpportunitiesCards() {
     )
 }
 
-const opportunities = [
-    {
-        title: "Compilance Officer (CFD)",
-        location: "Dubai",
-        tags: ["Full- time", "Forex", "Trading", "Analysis", "Business Development", "100 FTD's/month"]
-    },
-    {
-        title: "Senior FX Trader",
-        location: "Dubai",
-        tags: ["Full- time", "Forex", "Trading", "Analysis", "Business Development", "100 FTD's/month"]
-    },
-    {
-        title: "Oil Market Analyst",
-        location: "Dubai",
-        tags: ["Full- time", "Forex", "Trading", "Analysis", "Business Development", "100 FTD's/month"]
-    },
-    {
-        title: "Compilance Officer (CFD)",
-        location: "Dubai",
-        tags: ["Full- time", "Forex", "Trading", "Analysis", "Business Development", "100 FTD's/month"]
-    },
-    {
-        title: "Senior FX Trader",
-        location: "Dubai",
-        tags: ["Full- time", "Forex", "Trading", "Analysis", "Business Development", "100 FTD's/month"]
-    },
-    {
-        title: "Oil Market Analyst",
-        location: "Dubai",
-        tags: ["Full- time", "Forex", "Trading", "Analysis", "Business Development", "100 FTD's/month"]
-    }
-]
+// const opportunities = [
+//     {
+//         title: "Compilance Officer (CFD)",
+//         location: "Dubai",
+//         tags: ["Full- time", "Forex", "Trading", "Analysis", "Business Development", "100 FTD's/month"]
+//     },
+//     {
+//         title: "Senior FX Trader",
+//         location: "Dubai",
+//         tags: ["Full- time", "Forex", "Trading", "Analysis", "Business Development", "100 FTD's/month"]
+//     },
+//     {
+//         title: "Oil Market Analyst",
+//         location: "Dubai",
+//         tags: ["Full- time", "Forex", "Trading", "Analysis", "Business Development", "100 FTD's/month"]
+//     },
+//     {
+//         title: "Compilance Officer (CFD)",
+//         location: "Dubai",
+//         tags: ["Full- time", "Forex", "Trading", "Analysis", "Business Development", "100 FTD's/month"]
+//     },
+//     {
+//         title: "Senior FX Trader",
+//         location: "Dubai",
+//         tags: ["Full- time", "Forex", "Trading", "Analysis", "Business Development", "100 FTD's/month"]
+//     },
+//     {
+//         title: "Oil Market Analyst",
+//         location: "Dubai",
+//         tags: ["Full- time", "Forex", "Trading", "Analysis", "Business Development", "100 FTD's/month"]
+//     }
+// ]
