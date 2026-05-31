@@ -65,6 +65,62 @@
     max-width: 365px;
 }
 
+.trend-details-features-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.trend-details-suggestions {
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+}
+
+.trend-list-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.trend-list-item {
+    padding: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.trend-list-item strong {
+    display: block;
+    color: #FFFFFF;
+    margin-bottom: 0.5rem;
+}
+
+.trend-list-item p {
+    color: #d8d8d8;
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.trend-load-more-button {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.9rem 1rem;
+    border: none;
+    border-radius: 12px;
+    background: #B49325;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.trend-load-more-button:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
 .trend-details-content {
 
     h2,
@@ -122,4 +178,74 @@
         width: 8px;
         height: 8px;
     }
+}
+
+
+@media screen and (max-width: 1024px) {
+    .trend-details-container {
+        flex-direction: column;
+        display: flex;
+    }
+
+    .trend-details-features {
+        max-width: none;
+    }
+
+    .trend-details-features.sticky {
+        position: static;
+        top: auto;
+    }
+
+    .trend-details-features-inner {
+        overflow: visible;
+        max-height: none;
+    }
+
+    .trend-load-more-button {
+        display: block;
+    }
+
+    .case-details-premium-card-container {
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+.trends-not-found-base {
+    margin-top: 33vh;
+    text-align: center;
+}
+
+/* Make the right-side features column sticky on large screens
+   so it becomes fixed when it reaches the header. Adjust `top`
+   if your header height differs. */
+@media screen and (min-width: 1025px) {
+    .trend-details-features.sticky {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 133px;
+        /* default offset to sit below the header (adjust if header larger) */
+        align-self: flex-start;
+        z-index: 10;
+    }
+
+    .trend-details-features-inner {
+        max-height: calc(100vh - 175px);
+        overflow-y: auto;
+        padding-right: 0.5rem;
+    }
+
+    .trend-load-more-button {
+        display: none;
+    }
+}
+
+/* When the header has the `scrolled` class reduce the top offset so
+   the features column sits directly below the compact header. This
+   uses the general sibling combinator to target content that follows
+   the header in the DOM. */
+.app-header.scrolled~* .trend-details-features.sticky {
+    top: 133px;
+    /* compact header height - adjust if needed */
 }
