@@ -133,10 +133,10 @@ export default function DetailSection({
                                         title="CRYPTO TRADING FIRM"
                                         para="Performance Management Framework"
                                     /> */}
-                                    <PremiumCard
+                                    {/* <PremiumCard
                                         title="GLOBAL FINTECH COMPANY"
                                         para="Culture & Retention Strategy"
-                                    />
+                                    /> */}
 
 
 

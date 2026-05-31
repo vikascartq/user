@@ -8,6 +8,17 @@
     flex-direction: column;
 }
 
+.case-study-details-features {
+    flex: 1;
+    max-width: 365px;
+}
+
+.case-study-details-features-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
 .case-study-hero-para {
     font-weight: 400;
     color: #FFFFFF;
@@ -142,4 +153,80 @@
 
 .case-details-para {
     margin-bottom: 1rem;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    .case-details-container {
+        flex-direction: column;
+        display: flex;
+    }
+
+      .case-study-details-features {
+        max-width: none;
+    }
+
+    .case-study-details-features.sticky {
+        position: static;
+        top: auto;
+    }
+
+    .case-details-premium-card-container {
+        justify-content: center;
+        align-items: center;
+    }
+
+       .case-study-details-features-inner {
+        overflow: visible;
+        max-height: none;
+    }
+
+      .case-study-details-features-inner {
+        overflow: visible;
+        max-height: none;
+    }
+
+    .case-study-load-more-button {
+        display: block;
+    }
+
+    .case-details-details-premium-card-container {
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.case-study-not-found-base {
+    margin-top: 33vh;
+    text-align: center;
+}
+
+
+
+@media screen and (min-width: 1025px) {
+    .case-study-details-features.sticky {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 133px;
+        /* default offset to sit below the header (adjust if header larger) */
+        align-self: flex-start;
+        z-index: 10;
+    }
+
+    .case-study-details-features-inner {
+        max-height: calc(100vh - 175px);
+        overflow-y: auto;
+        padding-right: 0.5rem;
+    }
+
+    .case-study-load-more-button {
+        display: none;
+    }
+}
+
+
+.app-header.scrolled~* .case-study-details-features.sticky {
+    top: 133px;
+    /* compact header height - adjust if needed */
 }

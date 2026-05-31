@@ -1,9 +1,11 @@
+import useCaseStudy from "@/hooks/useCaseStudy";
 import GoldenArrowIcon from "@/svg/org/GoldenArrowIcon";
 import CaseStudyCard from "@/ui/case-study-card/CaseStudyCard";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 export default function CurrentCaseStudies() {
+      const { caseStudyList } = useCaseStudy();
     const navigate = useRouter();
     const handleView = () => {
         navigate.push("/case-studies")
@@ -18,16 +20,16 @@ export default function CurrentCaseStudies() {
                     </div>
                     <div className="current-trends-path-card-wrapper">
                         {
-                            Array(6).fill("").map((_, i) => (
+                            caseStudyList.slice(0, 6).map((caseStudy, i) => (
                                 <CaseStudyCard
-                                    key={`trend-card-${i + 1}`}
-                                    tag={"FX BROKER"}
-                                    title={"Complete HR Infrastructure Setup"}
+                                    key={caseStudy._id}
+                                    tag={caseStudy.title}
+                                    title={caseStudy.subHeading.slice(0, 35) + (caseStudy.subHeading.length > 35 ? "..." : "")}
                                     subTitle="Challenge"
-                                    para={"Rapidly growing broker lacked structured HR systems, recruitment processes and internal policies."}
-                                    para2="Reduced hiring cycle by 40% and improved internal operational efficiency."
+                                    para={caseStudy.challenge.slice(0, 100) + (caseStudy.challenge.length > 100 ? "..." : "")}
+                                    para2={caseStudy.description.slice(0, 100) + (caseStudy.description.length > 100 ? "..." : "")}
                                     btnText={"View More"}
-                                    btnClick={() => { }}
+                                    btnClick={() => navigate.push(`/case-studies/${caseStudy._id}`)}
                                 />
                             ))
                         }
