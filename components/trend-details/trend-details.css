@@ -148,14 +148,18 @@
         width: fit-content;
         font-weight: 600;
         font-size: 20px;
-        margin-bottom: 1rem;
+        margin-bottom: 1.9rem;
     }
+}
+
+.mt-60{
+    margin-top: 3.750rem;
 }
 
 .trend-details-content p {
     color: #FFFFFF;
     font-weight: 400;
-    margin-bottom: 1rem;
+    margin-bottom: 1.563rem;
 }
 
 .trend-details-content ul {

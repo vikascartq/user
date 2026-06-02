@@ -10,7 +10,7 @@ export default function HeroSection({ hero, isLoading }: { hero?: ITrendDetail |
                         <div className="hero-loading">Loading...</div>
                     ) : (
                         <>
-                            <h2 className="section-content-title">{hero?.title || ""}</h2>
+                            <h2 className="section-content-title mb-1">{hero?.title || ""}</h2>
                             <h2 className="section-content-title"><span>{hero?.subHeading || ""}</span></h2>
                             <div className="hero-para-wrapper">
                                 <p className="trend-details-hero-para">{hero?.description || ""}</p>

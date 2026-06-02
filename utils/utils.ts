@@ -13,3 +13,8 @@ export function sliceCharacters(str: string, length: number, isEllipsis?: boolea
 
     return trimmedStr + (isEllipsis ? "..." : "");
 }
+
+export function breakParagraph(str: string, ): string [] {
+    console.log("Breaking paragraph:", str);
+    return str.split("\n").filter(paragraph => paragraph.trim() !== "");
+}
