@@ -1,4 +1,5 @@
 import useTrends from "@/hooks/useTrends";
+import GoldenArrowIcon from "@/svg/org/GoldenArrowIcon";
 import TrendCard from "@/ui/trend-card/TrendCard";
 import { useRouter } from "next/navigation";
 
@@ -28,23 +29,29 @@ export default function AllTrends() {
                                     tag={trend.title}
                                     title={trend.subHeading.slice(0, 50) + (trend.subHeading.length > 50 ? "..." : "")}
                                     para={trend.description}
-                                    btnText={"Read Full Article " }
+                                    btnText={"Read Full Article "}
                                     btnClick={() => handleView(trend._id)}
                                 />
                             ))
                         )}
                     </div>
-                        {!isLoading && pagination?.hasNextPage && (
-                            <div className="trends-load-more-wrap flex justify-center">
-                                <button
-                                    className="trends-load-more-btn cursor-pointer"
-                                    onClick={loadMore}
-                                    disabled={isLoadingMore || isLoading}
-                                >
-                                    {isLoadingMore ? "Loading..." : "Load More"}
-                                </button>
-                            </div>
-                        )}
+                    {!isLoading && pagination?.hasNextPage && (
+                        <div className="trends-load-more-wrap flex justify-center">
+                            <button
+                                className="load-more-btn cursor-pointer"
+                                onClick={loadMore}
+                                disabled={isLoadingMore || isLoading}
+                            >
+                                {isLoadingMore ? (
+                                    "Loading..."
+                                ) : (
+                                    <>
+                                        View More <GoldenArrowIcon />
+                                    </>
+                                )}
+                            </button>
+                        </div>
+                    )}
                 </div>
             </div>
         </div>

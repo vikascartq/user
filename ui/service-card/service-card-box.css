@@ -8,7 +8,7 @@
     border-radius: 10px;
     width: 100%;
     max-width: 360px;
-    min-height: 545px;
+    min-height: 498px;
     padding: 1rem;
 }
 
@@ -16,6 +16,8 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
+}
+.service-card-box ul li:not(:last-child) {
     margin-bottom: .5rem;
 }
 

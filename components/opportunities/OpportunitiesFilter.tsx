@@ -6,7 +6,7 @@ import { ListBox, Select } from "@heroui/react";
 export default function OpportunitiesFilter() {
     return (
         <div className="opportunity-filter-base">
-            <div className="opportunity-field-wrapper">
+            {/* <div className="opportunity-field-wrapper">
                 <BagIcon />
                 <Select
                     className="w-[256px] text-white"
@@ -40,7 +40,7 @@ export default function OpportunitiesFilter() {
                         </ListBox>
                     </Select.Popover>
                 </Select>
-            </div>
+            </div> */}
             <div className="opportunity-field-divider"></div>
             <div className="opportunity-field-wrapper">
                 <SearchIcon />

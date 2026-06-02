@@ -24,7 +24,7 @@ export default function CurrentTrends() {
                             <TrendCard
                                 key={trend._id}
                                 tag={trend.title}
-                                title={trend.subHeading.slice(0, 35) + (trend.subHeading.length > 35 ? "..." : "")}
+                                title={trend.subHeading.slice(0, 55) + (trend.subHeading.length > 55 ? "..." : "")}
                                 para={trend.description}
                                 btnText={"Read Full Article "}
                                 btnClick={() => navigate.push(`/trends/${trend._id}`)}

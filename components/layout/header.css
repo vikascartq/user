@@ -121,6 +121,16 @@
     background: #f5f5f5;
 }
 
+.nav-container .n-active{
+    color: #dbbe65;
+}
+.nav-container a:hover{
+    color: #f5eacb;
+}
+.nav-container .dropdown-content a:hover{
+    color: #2c2c2c;
+}
+
 /* ---------------- MOBILE ---------------- */
 @media (max-width: 1080px) {
     .hamburger {

@@ -6,7 +6,10 @@ import { useEffect, useRef, useState } from "react";
 import ChevronDown from "@/svg/ChevronDown";
 
 import "./header.css";
+import { usePathname , useRouter } from "next/navigation";
 export default function Header() {
+    const router = useRouter()
+    const pathname = usePathname();
     const dropdownRef = useRef<HTMLLIElement>(null);
     const [trendsMenuOpen, setTrendsMenuOpen] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
@@ -70,11 +73,11 @@ export default function Header() {
 
                 <div className={`nav-container ${menuOpen ? "open" : ""}`}>
                     <ul>
-                        <li><Link onClick={handleClose} href="/">Home</Link></li>
-                        <li><Link onClick={handleClose} href="/about-us">About Us</Link></li>
-                        <li><Link onClick={handleClose} href="/services">Services</Link></li>
-                        <li><Link onClick={handleClose} href="/organization">Organization</Link></li>
-                        <li><Link onClick={handleClose} href="/job-seekers">Job Seekers</Link></li>
+                        <li><Link onClick={handleClose} href="/" className={pathname === "/" ? "n-active" : ""}>Home</Link></li>
+                        <li><Link onClick={handleClose} href="/about-us" className={pathname === "/about-us" ? "n-active" : ""}>About Us</Link></li>
+                        <li><Link onClick={handleClose} href="/services" className={pathname === "/services" ? "n-active" : ""}>Services</Link></li>
+                        <li><Link onClick={handleClose} href="/organization" className={pathname === "/organization" ? "n-active" : ""}>Organization</Link></li>
+                        <li><Link onClick={handleClose} href="/job-seekers" className={pathname === "/job-seekers" ? "n-active" : ""}>Job Seekers</Link></li>
                         <li className="dropdown-menu"
                             ref={dropdownRef}
                         >
@@ -82,9 +85,12 @@ export default function Header() {
                                 <Link
                                     onClick={handleClose}
                                     href="/trend-and-cases"
-                                    className="dropdown-link"
+                                    className={`dropdown-link ${pathname === "/trend-and-cases"  || pathname === "/trends" || pathname === "/case-studies" ? "n-active" : ""}`}
                                 >
-                                    Trends & Cases
+                                    
+                                    {pathname === "/trends" && "Trends" }
+                                    {pathname === "/case-studies" && "Case Studies" }
+                                    {pathname !== "/case-studies" && pathname !== "/trends" && "Trends & Cases" }
                                 </Link>
 
                                 <button
@@ -124,7 +130,7 @@ export default function Header() {
                                 </div>
                             )}
                         </li>
-                        <li><Link onClick={handleClose} href="/contact-us">Contact us</Link></li>
+                        <li><Link onClick={handleClose} href="/contact-us" className={pathname === "/contact-us" ? "n-active" : ""}>Contact us</Link></li>
                     </ul>
 
                     {
@@ -133,7 +139,7 @@ export default function Header() {
                                 <ButtonAction
                                     type="primary"
                                     text="Book A Strategy Call"
-                                    onClick={() => { }}
+                                    onClick={() => router.push("/contact-us")}
                                 />
                             </div>
                         )
@@ -146,7 +152,7 @@ export default function Header() {
                             <ButtonAction
                                 type="primary"
                                 text="Book A Strategy Call"
-                                onClick={() => { }}
+                                onClick={() => router.push("/contact-us")}
                             />
                         </div>
                     )

@@ -2,7 +2,9 @@
 
 import ButtonAction from "@/ui/buttons/ButtonAction";
 
+import { useRouter } from "next/navigation";
 export default function HeroSection() {
+    const router = useRouter();
     return (
         <div className="service-hero-section-base">
             <div className="section-frame">
@@ -15,7 +17,7 @@ export default function HeroSection() {
                     <ButtonAction
                         type="primary"
                         text="Book A Strategy Call"
-                        onClick={() => { }}
+                        onClick={() => router.push("/contact-us")}
                     />
                 </div>
             </div>

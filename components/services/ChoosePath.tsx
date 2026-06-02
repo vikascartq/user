@@ -2,8 +2,10 @@ import BusinessIcon from "@/svg/services/BusinessIcon";
 import JobIcon from "@/svg/services/JobIcon";
 import ButtonAction from "@/ui/buttons/ButtonAction";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function ChoosePath() {
+    const router = useRouter();
     return (
         <div className="section-base-bg">
             <div className="section-frame">
@@ -21,14 +23,14 @@ export default function ChoosePath() {
                             title={"For Businesses"}
                             desc={"Looking to scale your team, refine your HR processes, or build a high-performance culture?"}
                             btnText={"Scale My Business"}
-                            btnClick={() => ""}
+                            btnClick={() => router.push("/organization ")}
                         />
                         <ChoosePathCard
                             icon={<JobIcon />}
                             title={" For Job Seekers"}
                             desc={"Searching for your next leadership role or looking for career advisory in the trading and tech space?"}
                             btnText={"Find My Next Role"}
-                            btnClick={() => ""}
+                            btnClick={() => router.push("/job-seekers")}
                         />
                     </div>
                 </div>

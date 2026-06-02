@@ -1,7 +1,7 @@
 .trend-card {
     width: 100%;
     max-width: 370px;
-    height: 260px;
+    height: 305px;
     border-radius: 10px;
     padding: 1rem;
     border: 1px solid transparent;
@@ -15,18 +15,20 @@
 .trend-card-tag {
     color: #21DB00;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .trend-card-title {
     color: #FFFFFF;
     font-weight: 600;
-    margin: .5rem 0;
+    margin: .9rem 0;
+    font-size: 18px;
 }
 
 .trend-card-para {
     color: #FFFFFF;
     font-weight: 300;
+    font-size: 16px;
     line-height: 1.2;
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -38,7 +40,7 @@
     background: linear-gradient(to bottom, #C29226, #B27D0F, #D9B14A, #FADE7B, #DAB74F, #C7972B);
     width: 100%;
     height: 1px;
-    margin: 1.5rem 0;
+    margin: 2.188rem 0 1.75rem 0;
 }
 
 .trend-card-cta {

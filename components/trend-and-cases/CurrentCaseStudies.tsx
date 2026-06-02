@@ -3,6 +3,7 @@ import GoldenArrowIcon from "@/svg/org/GoldenArrowIcon";
 import CaseStudyCard from "@/ui/case-study-card/CaseStudyCard";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import {sliceCharacters} from "@/utils/utils";
 
 export default function CurrentCaseStudies() {
       const { caseStudyList } = useCaseStudy();
@@ -24,10 +25,10 @@ export default function CurrentCaseStudies() {
                                 <CaseStudyCard
                                     key={caseStudy._id}
                                     tag={caseStudy.title}
-                                    title={caseStudy.subHeading.slice(0, 35) + (caseStudy.subHeading.length > 35 ? "..." : "")}
+                                    title={sliceCharacters(caseStudy.subHeading, 35)}
                                     subTitle="Challenge"
-                                    para={caseStudy.challenge.slice(0, 100) + (caseStudy.challenge.length > 100 ? "..." : "")}
-                                    para2={caseStudy.description.slice(0, 100) + (caseStudy.description.length > 100 ? "..." : "")}
+                                    para={sliceCharacters(caseStudy.challenge, 110,)}
+                                    para2={sliceCharacters(caseStudy.description, 80)}
                                     btnText={"View More"}
                                     btnClick={() => navigate.push(`/case-studies/${caseStudy._id}`)}
                                 />
