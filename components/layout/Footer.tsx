@@ -1,11 +1,16 @@
+"use client"
 import LinkedinIcon from "@/svg/LinkedinIcon";
 import LocationWhiteIcon from "@/svg/LocationWhiteIcon";
 import WhiteMailIcon from "@/svg/WhiteMailIcon";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import "./footer.css";
 
 export default function Footer() {
+    const pathname = usePathname();
+
+
     return (
         <>
             <div className="footer-base">
@@ -23,25 +28,43 @@ export default function Footer() {
                             <h4>Quick Links</h4>
                             <ul>
                                 <li>
-                                    <Link href={"/"}>Home</Link>
+                                    <Link href={"/"} className={pathname === "/" ? "f-active" : ""}>Home</Link>
                                 </li>
                                 <li>
-                                    <Link href={"/about-us"}>About Us</Link>
+                                    <Link href={"/about-us"} className={pathname === "/about-us" ? "f-active" : ""}>About Us</Link>
                                 </li>
                                 <li>
-                                    <Link href={"/job-seekers"}>Job Seekers</Link>
+                                    <Link href={"/services"} className={pathname === "/services" ? "f-active" : ""}>Services</Link>
                                 </li>
                                 <li>
-                                    <Link href={"/organization"}>Organization</Link>
+                                    <Link href={"/contact-us"} className={pathname === "/contact-us" ? "f-active" : ""}>Contact us</Link>
+                                </li>
+
+                            </ul>
+
+
+                        </div>
+                        <div className="footer-col">
+
+                            <ul>
+
+                                <li>
+                                    <Link href={"/organization"} className={pathname === "/organization" ? "f-active" : ""}>Organization</Link>
                                 </li>
                                 <li>
-                                    <Link href={"/case-studies"}>Case Studies</Link>
+                                    <Link href={"/job-seekers"} className={pathname === "/job-seekers" ? "f-active" : ""}>Job Seekers</Link>
                                 </li>
                                 <li>
-                                    <Link href={"/trend-and-cases"}>Insights</Link>
+                                    <Link href={"/candidates"} className={pathname === "/candidates" ? "f-active" : ""}>Candidates</Link>
                                 </li>
                                 <li>
-                                    <Link href={"/contact-us"}>Contact us</Link>
+                                    <Link href={"/opportunities"} className={pathname === "/opportunities" ? "f-active" : ""}>Opportunity</Link>
+                                </li>
+                                <li>
+                                    <Link href={"/trends"} className={pathname === "/trends" ? "f-active" : ""}>Trends</Link>
+                                </li>
+                                <li>
+                                    <Link href={"/case-studies"} className={pathname === "/case-studies" ? "f-active" : ""}>Case Studies</Link>
                                 </li>
                             </ul>
                         </div>
@@ -65,10 +88,12 @@ export default function Footer() {
                 <div className="section-frame">
                     <div className="footer-bottom-container">
                         <div className="footer-bottom-text">© Recruitment king | All Rights Reserved </div>
-                        <div className="footer-bottom-text">Design & Developed By DevelopmentCart</div>
+                        {/* <div className="footer-bottom-text">Design & Developed By DevelopmentCart</div> */}
                         <div className="flex items-center gap-x-2">
-                            <a href="/" target="_blank" rel="noopener noreferrer" className="footer-bottom-text underline">T & C</a>
-                            <a href="/" target="_blank" rel="noopener noreferrer" className="footer-bottom-text underline">Privacy Policy</a>
+                            <Link href="/cookie-policy" target="_blank" rel="noopener noreferrer" className="footer-bottom-text underline">Cookies Policy </Link>
+                            <Link href="/privacy-policy" target="_blank" rel="noopener noreferrer" className="footer-bottom-text underline">Privacy Policy</Link>
+                            <Link href="/terms-for-businesses" target="_blank" rel="noopener noreferrer" className="footer-bottom-text underline">Terms for Businesses</Link>
+                            <Link href="/terms-for-candidates-and-job-seekers" target="_blank" rel="noopener noreferrer" className="footer-bottom-text underline">Terms for Candidates & Job Seekers</Link>
                         </div>
                     </div>
                 </div>

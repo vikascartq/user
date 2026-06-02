@@ -7,11 +7,13 @@ import JobExpect from "./JobExpect";
 import Opportunity from "./Opportunity";
 import Support from "./Support";
 import WhoThis from "./WhoThis";
+import {useRouter } from "next/navigation";
 
 export default function JobSeekersIndex() {
+     const router = useRouter();
     return (
         <>
-            <HeroSection />
+            <HeroSection router={router} />
             <Support />
             <HowSupport />
             <JobExpect />

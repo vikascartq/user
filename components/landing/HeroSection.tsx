@@ -1,8 +1,11 @@
 "use client";
 import PolygonIcon from "@/svg/PolygonIcon";
 import ButtonAction from "@/ui/buttons/ButtonAction";
+import {  useRouter } from "next/navigation";
 
 export default function HeroSection() {
+    const router = useRouter();
+
     return (
         <div className="hero-section-base">
             <div className="section-frame">
@@ -14,12 +17,12 @@ export default function HeroSection() {
                         <ButtonAction
                             type="primary"
                             text="Book A Strategy Call"
-                            onClick={() => { }}
+                            onClick={() => router.push("/contact-us")}
                         />
                         <ButtonAction
                             type="outline"
                             text="Explore Services"
-                            onClick={() => { }}
+                            onClick={() => router.push("/services")}
                         />
                     </div>
                 </div>

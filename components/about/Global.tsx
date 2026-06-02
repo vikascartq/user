@@ -7,7 +7,7 @@ export default function Global() {
         <SectionFrame
             type={"default"}
             imgNode={
-                <Image src={"/about/global.png"} alt="built" className="built-img" width={400} height={400} />
+                <Image src={"/about/new-global.png"} alt="built" className="built-img"  width={500} height={400} />
             }
             contentNode={
                 <>
@@ -17,7 +17,8 @@ export default function Global() {
                             <h2 className="section-content-title">Global in <span>outlook</span></h2>
                         </div>
                     </div>
-                    <p className="section-content-para">The ReqKing approach is international by nature. Experience across :</p>
+                    <p className="section-content-para">The ReqKing approach is international by nature.</p>
+                    <p className="mb-2">Experience across :</p>
                     <div className="flex items-center justify-between flex-wrap gap-4 mb-4 w-full">
                         <TagUI text={"Europe"} startIcon={<PrimaryLocationIcon />} />
                         <TagUI text={"LATAM"} startIcon={<PrimaryLocationIcon />} />

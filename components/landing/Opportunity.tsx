@@ -4,9 +4,11 @@ import FeatureCard from "@/ui/feat-card/FeatureCard";
 import SectionFrame from "@/ui/section/SectionFrame";
 import Image from "next/image";
 import VerticalCoverflow from "./VerticalCoverflow";
+import {useRouter}   from "next/navigation";
 
 export default function Opportunity() {
     const { jobList } = useJobs();
+    const router = useRouter();
     return (
         <div className="section-base-bg opportunity-section-base">
             <SectionFrame
@@ -37,7 +39,7 @@ export default function Opportunity() {
                         <ButtonAction
                             type="primary"
                             text="View All"
-                            onClick={() => { }}
+                            onClick={() => router.push("/opportunities")}
                         />
                     </>
                 }

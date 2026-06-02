@@ -27,6 +27,19 @@ body {
   }
 }
 
+.load-more-btn{
+  background-image: var(--primary-text-color);
+    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    -webkit-background-clip: text;
+    background-clip: text;
+    align-items: center;
+    gap: .5rem;
+    width: fit-content;
+    display: flex;
+}
+
 .section-gradient-heading {
   /* Fallback color for older browsers */
   color: #fff;

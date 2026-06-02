@@ -1,6 +1,8 @@
 import CaseStudyCard from "@/ui/case-study-card/CaseStudyCard";
 import { useRouter } from "next/navigation";
 import useCaseStudy from "@/hooks/useCaseStudy";
+import { sliceCharacters } from "@/utils/utils";
+import GoldenArrowIcon from "@/svg/org/GoldenArrowIcon";
 
 export default function AllCaseStudies() {
     const { caseStudyList, handleGetAllCaseStudies, isLoading, isLoadingMore, pagination, page, getCaseStudyDetails, caseStudyDetail, isDetailLoading, caseStudyNotFound
@@ -32,17 +34,14 @@ export default function AllCaseStudies() {
                                     key={caseStudy._id}
                                     tag={caseStudy.title}
                                     title={
-                                        caseStudy.subHeading.slice(0, 35) +
-                                        (caseStudy.subHeading.length > 35 ? "..." : "")
+                                        sliceCharacters(caseStudy.subHeading, 35)
                                     }
                                     subTitle="Challenge"
                                     para={
-                                        caseStudy.challenge.slice(0, 100) +
-                                        (caseStudy.challenge.length > 100 ? "..." : "")
+                                        sliceCharacters(caseStudy.challenge, 100)
                                     }
                                     para2={
-                                        caseStudy.description.slice(0, 100) +
-                                        (caseStudy.description.length > 100 ? "..." : "")
+                                        sliceCharacters(caseStudy.description, 80)
                                     }
                                     btnText="View More"
                                     btnClick={() => handleView(caseStudy._id)}
@@ -54,11 +53,13 @@ export default function AllCaseStudies() {
                     {!isLoading && pagination?.hasNextPage && (
                         <div className="trends-load-more-wrap flex justify-center">
                             <button
-                                className="trends-load-more-btn cursor-pointer"
+                                className="load-more-btn cursor-pointer"
                                 onClick={loadMore}
                                 disabled={isLoadingMore || isLoading}
                             >
-                                {isLoadingMore ? "Loading..." : "Load More"}
+                                {isLoadingMore ? "Loading..." : (<>
+                                    View More <GoldenArrowIcon />
+                                </>)}
                             </button>
                         </div>
                     )}

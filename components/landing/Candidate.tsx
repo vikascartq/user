@@ -4,9 +4,11 @@ import CandidateCard from "@/ui/candidate-card/CandidateCard";
 import SectionFrame from "@/ui/section/SectionFrame";
 import Image from "next/image";
 import CoverflowSlider from "./CoverflowSlider";
+import {useRouter}   from "next/navigation";
 
 export default function Candidate() {
     const { candidateList } = useCandidate();
+    const router = useRouter();
     return (
         <div className="section-base-bg candidate-section">
             <SectionFrame
@@ -38,7 +40,7 @@ export default function Candidate() {
                         <ButtonAction
                             type="primary"
                             text="View All"
-                            onClick={() => { }}
+                            onClick={() => router.push("/candidates")}
                         />
                     </>
                 }

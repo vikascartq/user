@@ -8,6 +8,14 @@ footer {
     }
 }
 
+.footer-col .f-active{
+    color: #dbbe65;
+}
+
+.footer-col a:hover{
+     color: #f5eacb;
+}
+
 .footer-col {
     flex: 1;
 

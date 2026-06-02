@@ -90,4 +90,13 @@ export default function ForBusiness() {
 }
 
 
-const services = ["Software Development", "SEO", "Sales", "Marketing"];
+const services = [
+  "Human Resources",
+  "Talent Acquisition and Recruitment",
+  "Salary Benchmarking and Recruitment Budgeting",
+  "Employee Relations",
+  "Business Performance",
+  "Business Growth",
+  "Strategy Making",
+  "New Business Development",
+];
