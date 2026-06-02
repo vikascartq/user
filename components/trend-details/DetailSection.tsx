@@ -1,6 +1,7 @@
 import { UIEvent } from "react";
 import PremiumCard from "@/ui/premium-card/PremiumCard";
 import type { ITrendContent, ITrendList } from "@/hooks/useTrends";
+import { breakParagraph } from "@/utils/utils";
 
 interface DetailSectionProps {
     content?: ITrendContent[] | undefined;
@@ -41,9 +42,12 @@ export default function DetailSection({
                                 <div className="detail-loading">Loading...</div>
                             ) : hasContent ? (
                                 ([...content!].sort((a, b) => a.order - b.order).map((c) => (
-                                    <div key={c.order}>
+                                    <div key={c.order} className="mt-60">
                                         <h2>{c.heading}</h2>
-                                        <p>{c.description}</p>
+                                        {/* <p>{c.description}</p> */}
+                                        {breakParagraph(c.description).map((paragraph, idx) => (
+                                            <p key={idx}>{paragraph}</p>
+                                        ))}
                                         {Array.isArray(c.list) && (
                                             <ul>
                                                 {c.list.map((li, idx) => (

@@ -12,6 +12,7 @@ import ListItemIcon8 from "@/svg/case-study/ListItemIcon8";
 import ListItemIcon9 from "@/svg/case-study/ListItemIcon9";
 import PremiumCard from "@/ui/premium-card/PremiumCard";
 import Image from "next/image";
+import { breakParagraph } from "@/utils/utils";
 
 
 interface IDetailsSectionProps {
@@ -47,12 +48,16 @@ export default function DetailsSection({ content, isLoading, caseStudyList, pagi
                                 <div className="case-details-loading">Loading...</div>
                             ) : hasContent ? (
                                 ([...content].sort((a, b) => a.order - b.order).map((c) => (
-                                    <>
-                                        <div className="section-content-title-wrapper" key={c._id}>
+                                    <div key={c._id}>
+                                        <div className="section-content-title-wrapper" >
                                             <Image src={"/dollar.svg"} alt="dollar" className="dollar-img" width={30} height={30} />
                                             <h2 className="section-content-title">{c.title}</h2>
                                         </div>
-                                        <p className="case-details-para">{c.description}</p>
+
+                                        {breakParagraph(c.description).map((paragraph, idx) => (
+                                            <p key={idx} className="case-details-para">{paragraph}</p>
+                                        ))}
+                                        {/* <p className="case-details-para">{c.description}</p> */}
 
                                         {c.list.length > 0 && c.list.map((item) => (
                                             <div className="styled-unordered-list-item" key={item.item}>
@@ -62,7 +67,7 @@ export default function DetailsSection({ content, isLoading, caseStudyList, pagi
                                             </div>
                                         ))}
 
-                                    </>
+                                    </div>
                                 )))
 
                             ) : (null)}
