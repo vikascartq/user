@@ -1,7 +1,7 @@
 import useCandidate from "@/hooks/useCandidate";
 import CandidateCard from "@/ui/candidate-card/CandidateCard";
-
-export default function CandidateCards() {
+import {sliceCharacters} from "@/utils/utils";
+export default function CandidateCards({ router }: { router: any }) {
     const { candidateList } = useCandidate();
     return (
         <div className="section-base-bg candidate-section-base">
@@ -20,9 +20,9 @@ export default function CandidateCards() {
                                 <CandidateCard
                                     key={`candidate-${i + 1}`}
                                     title={candidate?.role}
-                                    description={candidate?.description}
+                                    description={sliceCharacters(candidate?.description, 80)}
                                     tags={candidate?.skills}
-                                    onContact={() => { }}
+                                    onContact={() => router.push('contact-us')}
                                     imageName={candidate?.imageName}
                                 />
                             ))

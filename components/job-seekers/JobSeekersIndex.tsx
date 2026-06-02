@@ -23,7 +23,7 @@ export default function JobSeekersIndex() {
                 title="Take the Next Step with More Clarity"
                 para="A strong career move starts with a clearer understanding of where you stand and where you want to go next. Whether you need support identifying the right opportunities, improving your profile, preparing for interviews, understanding your market value, or building a more focused career plan, ReqKing helps you move forward with greater confidence, direction, and purpose."
                 buttonText="Share Your Profile"
-                onButtonClick={() => ""}
+                onButtonClick={() => router.push("/contact-us?type=job")}
             />
         </>
     )

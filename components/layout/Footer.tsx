@@ -36,17 +36,6 @@ export default function Footer() {
                                 <li>
                                     <Link href={"/services"} className={pathname === "/services" ? "f-active" : ""}>Services</Link>
                                 </li>
-                                <li>
-                                    <Link href={"/contact-us"} className={pathname === "/contact-us" ? "f-active" : ""}>Contact us</Link>
-                                </li>
-
-                            </ul>
-
-
-                        </div>
-                        <div className="footer-col">
-
-                            <ul>
 
                                 <li>
                                     <Link href={"/organization"} className={pathname === "/organization" ? "f-active" : ""}>Organization</Link>
@@ -61,10 +50,38 @@ export default function Footer() {
                                     <Link href={"/opportunities"} className={pathname === "/opportunities" ? "f-active" : ""}>Opportunity</Link>
                                 </li>
                                 <li>
+                                    <Link href={"/contact-us"} className={pathname === "/contact-us" ? "f-active" : ""}>Contact us</Link>
+                                </li>
+
+                            </ul>
+
+
+                        </div>
+                        <div className="footer-col footer-second-col">
+
+                            <ul>
+
+
+                                <li>
+                                    <Link href={"/trend-and-cases"} className={pathname === "/trend-and-cases" ? "f-active" : ""}>Trends and Case</Link>
+                                </li>
+                                <li>
                                     <Link href={"/trends"} className={pathname === "/trends" ? "f-active" : ""}>Trends</Link>
                                 </li>
                                 <li>
-                                    <Link href={"/case-studies"} className={pathname === "/case-studies" ? "f-active" : ""}>Case Studies</Link>
+                                    <Link href={"/case-studies"} className={pathname === "/case-studies" ? "f-active" : ""}>Case Study</Link>
+                                </li>
+                                <li>
+                                    <Link href={"/cookie-policy"} className={pathname === "/cookie-policy" ? "f-active" : ""}>Cookie Policy</Link>
+                                </li>
+                                <li>
+                                    <Link href={"/privacy-policy"} className={pathname === "/privacy-policy" ? "f-active" : ""}>Privacy Policy</Link>
+                                </li>
+                                <li>
+                                    <Link href={"/terms-for-businesses"} className={pathname === "/terms-for-businesses" ? "f-active" : ""}>Terms for Businesses</Link>
+                                </li>
+                                <li>
+                                    <Link href={"/terms-for-candidates-and-job-seekers"} className={pathname === "/terms-for-candidates-and-job-seekers" ? "f-active" : ""}>Terms for Candidates & Job Seekers</Link>
                                 </li>
                             </ul>
                         </div>
@@ -86,15 +103,10 @@ export default function Footer() {
             </div>
             <div className="footer-bottom">
                 <div className="section-frame">
-                    <div className="footer-bottom-container">
-                        <div className="footer-bottom-text">© Recruitment king | All Rights Reserved </div>
+                    <div className="footer-bottom-container flex items-center justify-center">
+                        <div className="footer-bottom-text">© Reqking | All Rights Reserved </div>
                         {/* <div className="footer-bottom-text">Design & Developed By DevelopmentCart</div> */}
-                        <div className="flex items-center gap-x-2">
-                            <Link href="/cookie-policy" target="_blank" rel="noopener noreferrer" className="footer-bottom-text underline">Cookies Policy </Link>
-                            <Link href="/privacy-policy" target="_blank" rel="noopener noreferrer" className="footer-bottom-text underline">Privacy Policy</Link>
-                            <Link href="/terms-for-businesses" target="_blank" rel="noopener noreferrer" className="footer-bottom-text underline">Terms for Businesses</Link>
-                            <Link href="/terms-for-candidates-and-job-seekers" target="_blank" rel="noopener noreferrer" className="footer-bottom-text underline">Terms for Candidates & Job Seekers</Link>
-                        </div>
+
                     </div>
                 </div>
             </div>

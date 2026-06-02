@@ -2,7 +2,7 @@
 
 import ButtonAction from "@/ui/buttons/ButtonAction";
 
-export default function HeroSection() {
+export default function HeroSection({ router }: { router: any }) {
     return (
         <div className="job-seekers-hero-section-base">
             <div className="section-frame">
@@ -16,7 +16,7 @@ export default function HeroSection() {
                         <ButtonAction
                             type="primary"
                             text="Book a Strategy Call"
-                            onClick={() => { }}
+                            onClick={() => router.push('contact-us')}
                         />
                     </div>
                 </div>

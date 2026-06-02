@@ -12,10 +12,10 @@ export default function ContactDetails({
     contactFormType
 }: ContactDetailsProp) {
     return (
-        <div className="section-base-bg contact-form-section">
+        <div className="section-base-bg contact-form-section" id="contact-form-section-base">
             <div className="section-frame">
-                <div className="contact-details-container">
-                    <div className="contact-details-base">
+                <div className="contact-details-container" >
+                    <div className="contact-details-base" >
                         <div className="contact-info-section">
                             <h4 className="contact-info-title">Send a Message</h4>
                             <div className="contact-info-container">
@@ -46,7 +46,7 @@ export default function ContactDetails({
                                 <div className="footer-connect-line-text">Connect with us on LinkedIn</div>
                             </div>
                         </div>
-                        <div className="contact-form-section-base">
+                        <div className="contact-form-section-base" >
                             <div className="contact-form-tab-wrapper">
                                 <div onClick={() => setContactFormType("general")} className={`contact-form-tab ${contactFormType === "general" ? "active" : ""}`}>General Inquiry</div>
                                 <div onClick={() => setContactFormType("business")} className={`contact-form-tab ${contactFormType === "business" ? "active" : ""}`}>For Business</div>

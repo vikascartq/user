@@ -5,7 +5,7 @@ import { Label, ListBox, Select } from "@heroui/react";
 export default function ForBusiness() {
     const { formik, isLoading } = useBusinessEnquiry();
     return (
-        <div className="general-inquiry-form">
+        <div className="general-inquiry-form" id="business-enquiry-form">
             <div className="form-field-group">
                 <InputField
                     type="text"

@@ -48,7 +48,7 @@ export default function DetailsSection({ content, isLoading, caseStudyList, pagi
                             ) : hasContent ? (
                                 ([...content].sort((a, b) => a.order - b.order).map((c) => (
                                     <>
-                                        <div className="section-content-title-wrapper">
+                                        <div className="section-content-title-wrapper" key={c._id}>
                                             <Image src={"/dollar.svg"} alt="dollar" className="dollar-img" width={30} height={30} />
                                             <h2 className="section-content-title">{c.title}</h2>
                                         </div>
