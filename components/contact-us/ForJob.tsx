@@ -10,7 +10,7 @@ const fileTypes = ["JPG", "PNG", "PDF"];
 export default function ForJob() {
     const { formik, isLoading } = useJobEnquiry();
     return (
-        <div className="general-inquiry-form">
+        <div className="general-inquiry-form" id="job-enquiry-form">
             <div className="form-field-group">
                 <InputField
                     type="text"

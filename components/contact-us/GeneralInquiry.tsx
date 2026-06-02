@@ -6,7 +6,7 @@ import TextAreaField from "@/ui/input/TextAreaField";
 export default function GeneralInquiry() {
     const { formik, isLoading } = useGeneralEnquiry();
     return (
-        <div className="general-inquiry-form">
+        <div className="general-inquiry-form" id="general-inquiry-form">
             <div className="form-field-group">
                 <InputField
                     type="text"

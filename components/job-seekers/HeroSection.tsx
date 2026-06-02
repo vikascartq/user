@@ -16,7 +16,7 @@ export default function HeroSection({router}: {router:any}) {
                         <ButtonAction
                             type="primary"
                             text="Share Your Profile"
-                            onClick={() => { }}
+                            onClick={() => router.push("/contact-us?type=job")}
                         />
                         <ButtonAction
                             type="outline"
