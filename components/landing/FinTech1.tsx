@@ -10,7 +10,7 @@ export default function FinTech() {
                         <h2 className="section-content-title">Built for High-Growth <span>Fintech Ecosystems</span></h2>
                     </div>
                     <div>
-                        <p className="why-choose-para">We enable fast-growing fintech companies with structured hiring, reliable talent access, and scalable workforce solutions designed to support long-term expansion.</p>
+                        <p className="why-choose-para finTech-why-choose-para">We enable fast-growing fintech companies with structured hiring, reliable talent access, and scalable workforce solutions designed to support long-term expansion.</p>
                     </div>
                     <div className="why-choose-feat">
                         <div className="why-choose-feat-text">Fintech Recruitment Advisory Experts</div>
