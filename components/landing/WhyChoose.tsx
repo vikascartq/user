@@ -14,11 +14,12 @@ export default function WhyChoose() {
                 <div className="why-choose-container">
                     <div className="section-content-title-wrapper justify-center">
                         <Image src={"/dollar.svg"} alt="dollar" className="dollar-img" width={30} height={30} />
-                        <h2 className="section-content-title">Why businesses choose <span>ReqKing</span></h2>
+                        <h2 className="section-content-title ">Why businesses choose <span>ReqKing</span></h2>
                     </div>
                     <div>
-                        <p className="why-choose-para">The goal is simple</p>
-                        <p className="why-choose-para">Make the people side of the business more scalable, more stable, and more effective.</p>
+                        <p className="why-choose-para l-why-choose-para">The goal is simple &nbsp;</p>
+
+                        <p className="why-choose-para l-why-choose-para">Make the people side of the business more scalable, more stable, and more effective.</p>
                     </div>
                     <div className="why-choose-card-container">
                         {

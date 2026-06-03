@@ -24,7 +24,7 @@ export default function LandingIndex() {
             <Global />
             <WhyChoose />
             <FinTech />
-            <Opportunity />
+            <Opportunity  />
             <Candidate />
             <Testimonials />
             <GoldenSection

@@ -8,10 +8,15 @@ export default function HeroSection() {
 
     return (
         <div className="hero-section-base">
-            <div className="section-frame">
+            <div className="section-frame hero-section-frame">
                 <div className="hero-content-wrapper">
+                    
+                    <div>
+
                     <h1 className="hero-title">Build the People Structure That Powers Growth  </h1>
                     <h2 className="hero-title text-gradient"> in Fintech  and Multi-Asset Businesses</h2>
+
+                    </div>
                     <p className="hero-para">High-growth businesses do not usually struggle because of ambition. They struggle when hiring, team structure, leadership demands, and day-to-day people decisions begin to expand faster than the business can support. ReqKing helps businesses build stronger people foundations so growth feels more stable, more intentional, and easier to sustain.</p>
                     <div className="hero-btn-group">
                         <ButtonAction

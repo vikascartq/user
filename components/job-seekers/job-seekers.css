@@ -230,3 +230,20 @@
         margin: auto;
     }
 }
+
+ .section-content-title-wrapper .s-sm{
+        display: none  ;
+    }
+
+@media screen and (max-width:767px) {
+    .job-expert-para {
+        text-align: left;
+    }
+
+    .section-content-title-wrapper .s-sm{
+        display: block;
+    }
+    .section-content-title-wrapper .s-lg{
+         display: none;
+    }
+}

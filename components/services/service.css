@@ -160,3 +160,17 @@
     margin-bottom: .5rem;
     margin-top: 2rem;
 }
+
+
+
+@media screen and (max-width:767px) {
+    .button-action.primary-cta {
+               max-width: 94%;
+        margin: 0 10px;
+    }
+
+
+    .choose-path-section-base{
+         padding: 1rem 0;
+    }
+}

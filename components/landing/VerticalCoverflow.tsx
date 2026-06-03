@@ -17,11 +17,7 @@ export default function VerticalCoverflow({ list, renderSlide }: VerticalCoverFl
             grabCursor={true}
             centeredSlides={true}
             slidesPerView={3}
-            autoplay={{
-                delay: 2000,
-                disableOnInteraction: false,
-                pauseOnMouseEnter: true,
-            }}
+            autoplay={false}
             speed={800}
             loop={true}
             initialSlide={1}
