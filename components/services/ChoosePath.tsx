@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 export default function ChoosePath() {
     const router = useRouter();
     return (
-        <div className="section-base-bg">
+        <div className="section-base-bg choose-path-section-base">
             <div className="section-frame">
                 <div className="choose-path-container">
                     <div className="section-content-title-wrapper justify-center">

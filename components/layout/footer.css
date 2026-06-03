@@ -137,6 +137,6 @@ footer {
 
 @media screen and (max-width:767px) {
     .footer-second-col{
-    margin-top: 0px;
+    margin-top: -15px;
 }
 }

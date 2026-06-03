@@ -24,6 +24,7 @@ export default function Opportunity() {
                                 tags={opportunity.skills}
                                 onApply={() => { }}
                                 type="type1"
+                                responsiveType={true}
                             />
                         )}
                     />

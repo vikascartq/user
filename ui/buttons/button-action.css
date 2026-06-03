@@ -70,3 +70,10 @@
         font-size: 14px;
     }
 }
+
+
+@media screen and (max-width: 767px) {
+    .button-action {
+        padding: 0% 0.5rem;
+    }
+}
