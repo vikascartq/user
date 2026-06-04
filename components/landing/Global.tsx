@@ -7,7 +7,7 @@ export default function Global() {
             <SectionFrame
                 type={"reverse"}
                 imgNode={
-                    <Image src={"/Grow.png"} alt="built" className="global-img" width={400} height={400} />
+                    <Image src={"/Grow.gif"} alt="built" className="global-img" width={400} height={400} />
                 }
                 contentNode={
                     <>

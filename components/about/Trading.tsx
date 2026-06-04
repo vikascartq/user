@@ -6,7 +6,7 @@ export default function Trading() {
             <SectionFrame
                 type={"reverse"}
                 imgNode={
-                    <Image src={"/about/trading.png"} alt="built" className="built-img" width={400} height={400} />
+                    <Image src={"/about/trading.png"} alt="built" className="built-img scale-in" width={400} height={400} />
                 }
                 contentNode={
                     <>

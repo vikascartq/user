@@ -6,7 +6,7 @@ export default function Help() {
             <SectionFrame
                 type={"reverse"}
                 imgNode={
-                    <Image src={"/help.png"} alt="built" className="help-img" width={400} height={400} />
+                    <Image src={"/help.gif"} alt="built" className="help-img" width={400} height={400} />
                 }
                 contentNode={
                     <>

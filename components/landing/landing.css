@@ -355,7 +355,7 @@
     }
 
     .feature-card{
-        height: 272px !important;
+        height: 100% !important;
     }
 
     .feature-card-btn-wrapper{

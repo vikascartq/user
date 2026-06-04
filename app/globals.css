@@ -159,3 +159,25 @@ input[type=number] {
 .toast-region--top {
   left: 70%;
 }
+
+.scale-in {
+    animation: scale-in 4s ease-in-out infinite;
+}
+
+@keyframes scale-in {
+    0% {
+        transform: scale(1); /* original size */
+    }
+    25% {
+        transform: scale(0.9);
+    }
+    50% {
+        transform: scale(0.8);
+    }
+    75% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1); /* back to original */
+    }
+}

@@ -126,3 +126,9 @@
     height: 30px;
     margin: 0 1rem;
 }
+
+@media screen and (max-width:767px){
+     .feature-card{
+        height: 100% !important;
+    }
+}

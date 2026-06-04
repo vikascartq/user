@@ -38,6 +38,7 @@ export default function Opportunity() {
                         <p className="section-content-para">Top professionals choose ReqKing to access high-impact roles across crypto, multi-asset trading, iGaming, AI, IT, Data Science, Backend Support (CS/OPS, Payments, Risk, Dealing, Anti-Fraud), Cloud, Infrastructure, Cyber Security and high-growth fintech businesses.</p>
                         <p className="section-content-para">We connect talent with organisations where performance is valued, growth is accelerated and long-term success is built.</p>
                         <ButtonAction
+                            className="mt-2 sm:mt-0"
                             type="primary"
                             text="View All"
                             onClick={() => router.push("/opportunities")}
