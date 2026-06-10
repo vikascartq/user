@@ -8,6 +8,7 @@ import {useRouter}   from "next/navigation";
 
 export default function Candidate() {
     const { candidateList } = useCandidate();
+   
     const router = useRouter();
     return (
         <div className="section-base-bg candidate-section">

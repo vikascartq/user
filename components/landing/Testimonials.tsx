@@ -14,11 +14,11 @@ export default function Testimonials() {
                     <div>
                         <p className="why-choose-para">Selected examples of HR transformation, talent strategy and performance frameworks implemented for fintech and financial markets businesses.</p>
                     </div>
-                    <div className="testimonials-container-wrapper">
-                        <div className="testimonials-container">
-                            {testimonialList.map((testimonial, index) => (
+                    <div className="testimonials-slider">
+                        <div className="testimonials-track">
+                            {[...testimonialList, ...testimonialList].map((testimonial, index) => (
                                 <TestimonialCard
-                                    key={index}
+                                    key={`${testimonial.name}-${index}`}
                                     title={testimonial.role}
                                     company={testimonial.name}
                                     testimonial={testimonial.description}

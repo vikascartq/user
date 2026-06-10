@@ -3,7 +3,7 @@ import type { AxiosResponse } from "axios";
 import axios from "axios";
 // import Cookies from "js-cookie";
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+const baseUrl = "https://reqkingbackend.vikascircle.com";
 
 const axiosInstance = axios.create({
 	baseURL: baseUrl,

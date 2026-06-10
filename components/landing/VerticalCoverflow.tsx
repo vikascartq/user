@@ -9,18 +9,27 @@ import "swiper/css/effect-coverflow";
 import { IJobList } from "@/hooks/useJobs";
 import "./vertical-slider.css";
 
+
 export default function VerticalCoverflow({ list, renderSlide }: VerticalCoverFlowProps) {
+    const loopedJobs =
+        list.length < 6
+            ? [...list, ...list, ...list]
+            : list;
     return (
         <Swiper
             direction="vertical"
             effect="coverflow"
-            grabCursor={true}
-            centeredSlides={true}
+            centeredSlides
             slidesPerView={3}
-            autoplay={false}
-            speed={800}
-            loop={true}
-            initialSlide={1}
+            loop
+            grabCursor={false}
+            allowTouchMove={false}
+            speed={9000}
+            autoplay={{
+                delay: 0,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+            }}
             spaceBetween={20}
             coverflowEffect={{
                 rotate: 0,
@@ -29,39 +38,24 @@ export default function VerticalCoverflow({ list, renderSlide }: VerticalCoverFl
                 modifier: 2.5,
                 slideShadows: false,
             }}
-            breakpoints={{
-                0: {
-                    direction: "horizontal",
-                    slidesPerView: 1,
-                    spaceBetween: 10,
-                    coverflowEffect: {
-                        depth: 80,
-                        modifier: 1,
-                    },
-                },
-                640: {
-                    direction: "horizontal",
-                    slidesPerView: 2,
-                    spaceBetween: 15,
-                    coverflowEffect: {
-                        depth: 100,
-                        modifier: 1.5,
-                    },
-                },
-                1024: {
-                    direction: "vertical",
-                    slidesPerView: 3,
-                    spaceBetween: 20,
-                    coverflowEffect: {
-                        depth: 150,
-                        modifier: 2.5,
-                    },
-                },
-            }}
             modules={[EffectCoverflow, Autoplay]}
             className="myVerticalSwiper"
+            breakpoints={{
+                0: {
+                    effect: "slide",
+                    direction: "horizontal",
+                    slidesPerView: 1,
+                    centeredSlides: true,
+                },
+                1024: {
+                    effect: "coverflow",
+                    direction: "vertical",
+                    slidesPerView: 3,
+                    centeredSlides: true,
+                },
+            }}
         >
-            {list.map((item, index) => (
+            {loopedJobs.map((item, index) => (
                 <SwiperSlide key={index}>
                     {renderSlide(item)}
                 </SwiperSlide>

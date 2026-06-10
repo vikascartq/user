@@ -2,9 +2,29 @@ footer {
     display: flex;
     padding: 3rem 0;
 
-    @media screen and (max-width:767px) {
+    @media screen and (max-width: 480px) {
         flex-direction: column;
-        gap: 1rem;
+        gap: 1.5rem;
+        padding: 2rem 0;
+    }
+
+    @media screen and (min-width: 481px) and (max-width: 767px) {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 2.5rem 0;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    @media screen and (min-width: 1024px) and (max-width: 1279px) {
+        gap: 1.5rem;
+    }
+
+    @media screen and (min-width: 1536px) {
+        padding: 4rem 0;
     }
 }
 
@@ -31,18 +51,47 @@ footer {
         flex-direction: column;
         align-items: center;
 
-        @media screen and (max-width:767px) {
+        @media screen and (max-width: 480px) {
             align-items: flex-start;
-
         }
 
+        @media screen and (min-width: 481px) and (max-width: 767px) {
+            align-items: flex-start;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            align-items: flex-start;
+        }
     }
 
     &:nth-child(3) {
         h4 {
             min-width: 217px;
-        }
 
+            @media screen and (max-width: 480px) {
+                min-width: auto;
+            }
+
+            @media screen and (min-width: 481px) and (max-width: 767px) {
+                min-width: auto;
+            }
+        }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        flex: 0 0 45%;
+        margin-bottom: 1.5rem;
+
+        &:nth-child(3) {
+            flex: 0 0 100%;
+        }
+    }
+
+    @media screen and (min-width: 1024px) and (max-width: 1279px) {
+        &:nth-child(2),
+        &:nth-child(3) {
+            align-items: center;
+        }
     }
 }
 
@@ -50,19 +99,56 @@ footer {
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 1rem;
+
+    @media screen and (max-width: 480px) {
+        font-size: 18px;
+        margin-bottom: 0.75rem;
+    }
+
+    @media screen and (min-width: 481px) and (max-width: 767px) {
+        font-size: 20px;
+        margin-bottom: 0.75rem;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        font-size: 22px;
+    }
+
+    @media screen and (min-width: 1536px) {
+        font-size: 28px;
+    }
 }
 
 .footer-col ul {
     min-width: 132px;
+
+    @media screen and (max-width: 480px) {
+        min-width: auto;
+        width: 100%;
+    }
 }
 
 .footer-col ul li {
     margin-bottom: 1rem;
+
+    @media screen and (max-width: 480px) {
+        margin-bottom: 0.75rem;
+    }
 }
 
 .footer-logo-img {
     width: 125px;
     height: 105px;
+
+    @media screen and (max-width: 480px) {
+        width: 100px;
+        height: 84px;
+    }
+
+    @media screen and (min-width: 1536px) {
+        width: 140px;
+        height: 118px;
+    }
 }
 
 .footer-about {
@@ -71,39 +157,72 @@ footer {
     font-size: 16px;
     font-weight: 400;
     line-height: 1.2;
+
+    @media screen and (max-width: 480px) {
+        max-width: 100%;
+        font-size: 13px;
+    }
+
+    @media screen and (min-width: 481px) and (max-width: 767px) {
+        max-width: 100%;
+        font-size: 14px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        max-width: 100%;
+    }
+
+    @media screen and (min-width: 1536px) {
+        max-width: 360px;
+        font-size: 18px;
+    }
 }
 
 .footer-connect-line-wrap {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 0.75rem;
+
+    @media screen and (min-width: 1536px) {
+        gap: 1rem;
+    }
 }
 
 .footer-connect-line-text {
-    /* Apply the linear gradient as a background image */
     background-image: var(--primary-text-color);
-
-    /* Clip the background to the text area */
     background-clip: text;
     -webkit-background-clip: text;
-    /* For WebKit browsers */
-
-    /* Make the text color transparent to reveal the background */
     text-fill-color: transparent;
     -webkit-text-fill-color: transparent;
-    /* For WebKit browsers */
     width: fit-content;
-
     font-weight: 500;
+    font-size: 14px;
+
+    @media screen and (max-width: 480px) {
+        font-size: 12px;
+    }
+
+    @media screen and (min-width: 1536px) {
+        font-size: 16px;
+    }
 }
 
 .footer-bottom {
     height: 30px;
     background-image: linear-gradient(to right, #C7972B, #DAB74F, #D9B14A, #B37F11, #DAB74F, #B27D0F, #C29226);
 
-    @media screen and (max-width:767px) {
+    @media screen and (max-width: 480px) {
         height: auto;
-        padding: 4px;
+        padding: 6px 0;
+    }
+
+    @media screen and (min-width: 481px) and (max-width: 767px) {
+        height: auto;
+        padding: 6px 0;
+    }
+
+    @media screen and (min-width: 1536px) {
+        height: 36px;
     }
 }
 
@@ -113,30 +232,52 @@ footer {
     justify-content: center;
     height: 100%;
 
-    @media screen and (max-width:767px) {
+    @media screen and (max-width: 480px) {
         flex-direction: column;
+        gap: 2px;
+    }
+
+    @media screen and (min-width: 481px) and (max-width: 767px) {
+        flex-direction: column;
+        gap: 2px;
     }
 }
 
-.footer-second-col{
+.footer-second-col {
     margin-top: 53px;
+
+    @media screen and (max-width: 480px) {
+        margin-top: 0;
+    }
+
+    @media screen and (min-width: 481px) and (max-width: 767px) {
+        margin-top: 0;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        margin-top: 0;
+    }
 }
-
-
 
 .footer-bottom-text {
     font-size: 10px;
     font-weight: 700;
-}
 
-.footer-bottom .section-frame {
-    @media screen and (max-width:767px) {
-        padding: 0%;
+    @media screen and (max-width: 480px) {
+        font-size: 9px;
+    }
+
+    @media screen and (min-width: 1536px) {
+        font-size: 12px;
     }
 }
 
-@media screen and (max-width:767px) {
-    .footer-second-col{
-    margin-top: -15px;
-}
+.footer-bottom .section-frame {
+    @media screen and (max-width: 480px) {
+        padding: 0 0.5rem;
+    }
+
+    @media screen and (min-width: 481px) and (max-width: 767px) {
+        padding: 0 0.75rem;
+    }
 }

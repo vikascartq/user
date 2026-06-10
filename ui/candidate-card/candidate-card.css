@@ -2,9 +2,7 @@
     border: 1px solid transparent;
     background:
         linear-gradient(#000, #000) padding-box,
-        /* Inner background color */
         linear-gradient(to right, #C29226, #B27D0F, #D9B14A, #FADE7B, #DAB74F, #C7972B) border-box;
-    /* Border gradient */
     border-radius: 10px;
     width: 100%;
     max-width: 342px;
@@ -14,8 +12,28 @@
     flex-direction: column;
     justify-content: space-between;
 
-    @media screen and (max-width:767px) {
-        max-width: none;
+    @media screen and (max-width: 480px) {
+        max-width: 100%;
+        height: auto;
+        min-height: 420px;
+        padding: 0.4rem;
+    }
+
+    @media screen and (min-width: 481px) and (max-width: 767px) {
+        max-width: 100%;
+        height: auto;
+        min-height: 430px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        max-width: 300px;
+        height: auto;
+        min-height: 420px;
+    }
+
+    @media screen and (min-width: 1536px) {
+        max-width: 370px;
+        height: 480px;
     }
 }
 
@@ -26,12 +44,28 @@
 .candidate-card-title {
     color: #FFFFFF;
     font-weight: 400;
+
+    @media screen and (max-width: 480px) {
+        font-size: 15px;
+    }
+
+    @media screen and (min-width: 1536px) {
+        font-size: 20px;
+    }
 }
 
 .candidate-card-description {
     color: #FFFFFF;
     font-weight: 300;
     font-size: 14px;
+
+    @media screen and (max-width: 480px) {
+        font-size: 12px;
+    }
+
+    @media screen and (min-width: 1536px) {
+        font-size: 15px;
+    }
 }
 
 .candidate-card-tag-group {
@@ -49,12 +83,20 @@
     font-size: 12px;
     text-align: center;
     font-weight: 300;
-
-    /* Prevent long text from overflowing */
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 40px;
+
+    @media screen and (max-width: 480px) {
+        font-size: 10px;
+        min-height: 34px;
+        padding: 4px;
+    }
+
+    @media screen and (min-width: 1536px) {
+        font-size: 13px;
+    }
 }
 
 .candidate-img {
@@ -62,4 +104,16 @@
     height: 190px;
     object-fit: scale-down;
     border-radius: 8px;
+
+    @media screen and (max-width: 480px) {
+        height: 160px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        height: 170px;
+    }
+
+    @media screen and (min-width: 1536px) {
+        height: 200px;
+    }
 }
