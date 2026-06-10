@@ -36,7 +36,7 @@ export default function VerticalCoverflow({ list, renderSlide }: VerticalCoverFl
                 stretch: 0,
                 depth: 150,
                 modifier: 2.5,
-                slideShadows: false,
+                slideShadows:false,
             }}
             modules={[EffectCoverflow, Autoplay]}
             className="myVerticalSwiper"
@@ -46,6 +46,9 @@ export default function VerticalCoverflow({ list, renderSlide }: VerticalCoverFl
                     direction: "horizontal",
                     slidesPerView: 1,
                     centeredSlides: true,
+                     spaceBetween: 16,
+                     
+                    
                 },
                 1024: {
                     effect: "coverflow",

@@ -16,7 +16,7 @@ export default function Testimonials() {
                     </div>
                     <div className="testimonials-slider">
                         <div className="testimonials-track">
-                            {[...testimonialList, ...testimonialList].map((testimonial, index) => (
+                            {[...testimonialList].map((testimonial, index) => (
                                 <TestimonialCard
                                     key={`${testimonial.name}-${index}`}
                                     title={testimonial.role}

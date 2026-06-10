@@ -51,3 +51,12 @@
 .swiper-slide-next {
     transform: scale(0.85);
 }
+.myVerticalSwiper .swiper-slide {
+    opacity: 1 !important;
+}
+
+.myVerticalSwiper .swiper-slide-active,
+.myVerticalSwiper .swiper-slide-prev,
+.myVerticalSwiper .swiper-slide-next {
+    opacity: 1 !important;
+}
