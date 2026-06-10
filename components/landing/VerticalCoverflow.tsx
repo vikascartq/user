@@ -24,7 +24,7 @@ export default function VerticalCoverflow({ list, renderSlide }: VerticalCoverFl
             loop
             grabCursor={false}
             allowTouchMove={false}
-            speed={9000}
+            speed={7000}
             autoplay={{
                 delay: 0,
                 disableOnInteraction: false,
@@ -35,7 +35,7 @@ export default function VerticalCoverflow({ list, renderSlide }: VerticalCoverFl
                 rotate: 0,
                 stretch: 0,
                 depth: 150,
-                modifier: 2.5,
+                modifier: 2,
                 slideShadows: false,
             }}
             modules={[EffectCoverflow, Autoplay]}
