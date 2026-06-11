@@ -176,10 +176,10 @@
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     .opportunity-card {
-        max-width: 500px;
-        min-height: 460px;
+        max-width: 100%;
+        min-height: 440px;
         margin: 0 auto;
-        padding: 35px;
+        padding: 28px;
         gap: 18px;
     }
 
@@ -205,8 +205,8 @@
 @media screen and (max-width: 767px) {
     .opportunity-card {
         max-width: 100%;
-        min-height: 420px;
-        padding: 35px;
+        min-height: auto;
+        padding: 24px;
         gap: 14px;
     }
 

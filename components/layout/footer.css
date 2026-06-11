@@ -15,8 +15,10 @@ footer {
     }
 
     @media screen and (min-width: 768px) and (max-width: 1023px) {
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
         gap: 2rem;
+        align-items: start;
     }
 
     @media screen and (min-width: 1024px) and (max-width: 1279px) {
@@ -79,11 +81,23 @@ footer {
     }
 
     @media screen and (min-width: 768px) and (max-width: 1023px) {
-        flex: 0 0 45%;
-        margin-bottom: 1.5rem;
+        min-width: 0;
+        margin-bottom: 0;
+
+        &:nth-child(1) {
+            order: 1;
+        }
+
+        &:nth-child(4) {
+            order: 2;
+        }
+
+        &:nth-child(2) {
+            order: 3;
+        }
 
         &:nth-child(3) {
-            flex: 0 0 100%;
+            order: 4;
         }
     }
 
@@ -124,6 +138,11 @@ footer {
 
     @media screen and (max-width: 480px) {
         min-width: auto;
+        width: 100%;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        min-width: 0;
         width: 100%;
     }
 }
@@ -169,7 +188,8 @@ footer {
     }
 
     @media screen and (min-width: 768px) and (max-width: 1023px) {
-        max-width: 100%;
+        max-width: 260px;
+        font-size: 14px;
     }
 
     @media screen and (min-width: 1536px) {
@@ -182,6 +202,10 @@ footer {
     display: flex;
     align-items: center;
     gap: 0.75rem;
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        margin-top: auto;
+    }
 
     @media screen and (min-width: 1536px) {
         gap: 1rem;
@@ -204,6 +228,10 @@ footer {
 
     @media screen and (min-width: 1536px) {
         font-size: 16px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        font-size: 13px;
     }
 }
 
@@ -256,6 +284,26 @@ footer {
 
     @media screen and (min-width: 768px) and (max-width: 1023px) {
         margin-top: 0;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .footer-col:nth-child(1) {
+        min-height: 100%;
+    }
+
+    .footer-col:nth-child(2),
+    .footer-col:nth-child(3),
+    .footer-col:nth-child(4) {
+        align-self: start;
+    }
+
+    .footer-col:nth-child(4) ul li {
+        margin-bottom: 0.75rem;
+    }
+
+    .footer-col:nth-child(4) h4 {
+        margin-bottom: 0.85rem;
     }
 }
 

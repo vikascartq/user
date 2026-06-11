@@ -11,17 +11,23 @@ export default function GoldenSection({
         <div className="golden-section-base">
             <div className="section-frame">
                 <div className="golden-section-container">
-                    <h4>{title}</h4>
-                    <p>{para}</p>
-                    <ButtonAction
-                        text={buttonText}
-                        type={"dark"}
-                        onClick={onButtonClick}
-                    />
-                    {
-                        para2 &&
-                        <p>{para2}</p>
-                    }
+                    <div className="golden-section-header">
+                        <h4>{title}</h4>
+                    </div>
+                    <div className="golden-section-content">
+                        <p>{para}</p>
+                        {
+                            para2 &&
+                            <p>{para2}</p>
+                        }
+                    </div>
+                    <div className="golden-section-footer">
+                        <ButtonAction
+                            text={buttonText}
+                            type={"dark"}
+                            onClick={onButtonClick}
+                        />
+                    </div>
                 </div>
             </div>
         </div>

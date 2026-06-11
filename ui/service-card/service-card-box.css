@@ -10,6 +10,16 @@
     max-width: 360px;
     min-height: 498px;
     padding: 1rem;
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        max-width: 100%;
+        min-height: 460px;
+    }
+
+    @media screen and (max-width: 767px) {
+        max-width: 100%;
+        min-height: auto;
+    }
 }
 
 .service-card-box ul li {

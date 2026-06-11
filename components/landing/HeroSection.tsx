@@ -8,7 +8,7 @@ export default function HeroSection() {
 
     return (
         <div className="hero-section-base">
-            <div className="section-frame hero-section-frame">
+            <div className="section-frame page-hero-frame hero-section-frame">
                 <div className="hero-content-wrapper">
                     
                     <div>

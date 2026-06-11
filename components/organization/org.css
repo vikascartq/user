@@ -2,7 +2,8 @@
     background-image: url("/org/org-hero-bg.png");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    min-height: 100vh;
+    min-height: 100dvh;
     max-height: 520px;
     display: flex;
     flex-direction: column;
@@ -84,6 +85,15 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
 
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        gap: 1.5rem;
+    }
+
+    @media screen and (max-width: 767px) {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
     @media (max-width: 600px) {
         grid-template-columns: 1fr;
     }
@@ -124,12 +134,6 @@
 /* // for small scrre */
 
 @media screen and (max-width:767px){
-    .org-hero-section-base .section-frame {
-        padding: 0 1rem;
-        margin-top: 6rem;
-
-    }
-
     .button-action.primary-cta {
         max-width: 100%;
     }

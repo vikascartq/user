@@ -2,7 +2,8 @@
     background-image: url("/case-study/case-study-details-hero-bg.png");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    min-height: 100vh;
+    min-height: 100dvh;
     max-height: 590px;
     display: flex;
     flex-direction: column;

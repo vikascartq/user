@@ -9,7 +9,7 @@ interface IHeroSectionProps {
 export default function HeroSection({ title, subHeading, isLoading }: IHeroSectionProps) {
     return (
         <div className="case-study-hero-section-base">
-            <div className="section-frame">
+            <div className="section-frame page-hero-frame">
                 <div className="hero-content-wrapper">
 
 

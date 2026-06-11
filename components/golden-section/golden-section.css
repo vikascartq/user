@@ -16,8 +16,8 @@
 
     @media screen and (min-width: 768px) and (max-width: 1023px) {
         height: auto;
-        min-height: 450px;
-        padding: 3rem 0;
+        min-height: 400px;
+        padding: 2rem 0;
     }
 
     @media screen and (min-width: 1024px) and (max-width: 1279px) {
@@ -33,17 +33,70 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 1rem;
+    justify-content: space-between;
     height: 100%;
+    min-height: inherit;
+    padding: 3rem 0;
 
     @media screen and (max-width: 480px) {
-        gap: 0.75rem;
+        justify-content: center;
+        gap: 1rem;
+        min-height: auto;
+        padding: 0;
+    }
+
+    @media screen and (min-width: 481px) and (max-width: 767px) {
+        justify-content: center;
+        gap: 1rem;
+        min-height: auto;
+        padding: 0;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        padding: 1.25rem 0;
     }
 
     @media screen and (min-width: 1536px) {
-        gap: 1.5rem;
+        padding: 3.5rem 0;
     }
+}
+
+.golden-section-header,
+.golden-section-content,
+.golden-section-footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.golden-section-header {
+    align-items: flex-start;
+}
+
+.golden-section-content {
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    @media screen and (max-width: 480px) {
+        flex: unset;
+        gap: 0.75rem;
+    }
+
+    @media screen and (min-width: 481px) and (max-width: 767px) {
+        flex: unset;
+        gap: 0.75rem;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        gap: 0.75rem;
+    }
+}
+
+.golden-section-footer {
+    align-items: flex-end;
 }
 
 .golden-section-container h4 {
@@ -64,8 +117,9 @@
     }
 
     @media screen and (min-width: 768px) and (max-width: 1023px) {
-        font-size: 26px;
+        font-size: 24px;
         text-align: center;
+        max-width: 680px;
     }
 
     @media screen and (min-width: 1024px) and (max-width: 1279px) {
@@ -83,6 +137,8 @@
     color: #1E1204;
     font-weight: 400;
     text-align: center;
+    max-width: 760px;
+    margin: 0;
 
     @media screen and (max-width: 480px) {
         font-size: 13px;
@@ -94,7 +150,9 @@
     }
 
     @media screen and (min-width: 768px) and (max-width: 1023px) {
-        font-size: 15px;
+        font-size: 14px;
+        line-height: 1.5;
+        max-width: 700px;
     }
 
     @media screen and (min-width: 1536px) {
@@ -103,9 +161,14 @@
 }
 
 .golden-section-container .button-action {
-    margin-top: 1rem;
+    margin-top: 0;
 
     @media screen and (max-width: 480px) {
         max-width: 280px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        margin-top: 0.5rem;
+        max-width: 320px;
     }
 }

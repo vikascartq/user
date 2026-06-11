@@ -10,6 +10,11 @@
     max-width: 550px;
     min-height: 345px;
     padding: 1rem;
+
+    @media screen and (max-width: 767px) {
+        max-width: 100%;
+        min-height: auto;
+    }
 }
 
 .detail-card-title {

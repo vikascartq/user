@@ -3,7 +3,7 @@
 export default function HeroSection() {
     return (
         <div className="about-hero-section-base">
-            <div className="section-frame">
+            <div className="section-frame page-hero-frame">
                 <div className="hero-content-wrapper">
                     <h1 className="hero-title">
                         A specialist partner for the people{" "}

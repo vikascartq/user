@@ -4,7 +4,7 @@ import "../cookie-policy/cookie-policy.css";
 export default function TermsForBusinessIndex() {
     return (
         <div className="section-base-bg cookie-policy-section-base">
-            <div className="section-frame">
+            <div className="section-frame page-top-offset">
                 <div className="cookie-policy-container">
                     <h2>Standard Terms and Conditions for Businesses</h2>
                     <h4>Effective date: 30th March 2026</h4>

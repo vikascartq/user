@@ -4,7 +4,7 @@ import type { ITrendDetail } from "@/hooks/useTrends";
 export default function HeroSection({ hero, isLoading }: { hero?: ITrendDetail | undefined, isLoading?: boolean }) {
     return (
         <div className="trend-details-hero-section-base">
-            <div className="section-frame">
+            <div className="section-frame page-hero-frame">
                 <div className="hero-content-wrapper">
                     {isLoading ? (
                         <div className="hero-loading">Loading...</div>

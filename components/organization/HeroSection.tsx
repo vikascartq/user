@@ -5,7 +5,7 @@ import ButtonAction from "@/ui/buttons/ButtonAction";
 export default function HeroSection({ router }: { router: any }) {
     return (
         <div className="org-hero-section-base">
-            <div className="section-frame">
+            <div className="section-frame page-hero-frame">
                 <div className="hero-content-wrapper">
                     <h2 className="section-content-title"> People Strategy for Businesses That Want </h2>
                     <h2 className="section-content-title"><span> to Grow with Structure</span></h2>

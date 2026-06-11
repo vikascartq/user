@@ -7,7 +7,7 @@ export default function HeroSection() {
     const router = useRouter();
     return (
         <div className="service-hero-section-base">
-            <div className="section-frame">
+            <div className="section-frame page-hero-frame">
                 <div className="hero-content-wrapper">
                     <h2 className="section-content-title"> Our <span>Services</span></h2>
                     <div className="hero-para-wrapper">

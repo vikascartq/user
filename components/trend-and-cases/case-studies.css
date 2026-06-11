@@ -2,7 +2,8 @@
     background-image: url("/case-study/case-study-hero-bg.png");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    min-height: 100vh;
+    min-height: 100dvh;
     max-height: 590px;
     display: flex;
     flex-direction: column;
@@ -67,9 +68,14 @@
     display: grid;
     margin: 2rem 0;
 
-    @media screen and (max-width:767px) {
-        grid-template-columns: auto;
-        place-items: center;
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
 
+    @media screen and (max-width:767px) {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+        place-items: center;
     }
 }

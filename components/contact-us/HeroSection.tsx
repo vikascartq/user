@@ -4,7 +4,7 @@
 export default function HeroSection() {
     return (
         <div className="contact-hero-section-base">
-            <div className="section-frame">
+            <div className="section-frame page-hero-frame">
                 <div className="hero-content-wrapper">
                     {/* <h2 className="section-content-title">Discover Roles That</h2> */}
                     <h2 className="section-content-title">Contact <span>Us</span></h2>

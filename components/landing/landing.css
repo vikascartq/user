@@ -7,7 +7,8 @@
     background-position: center;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
+    min-height: 100dvh;
     max-height: 700px;
 
     @media screen and (max-width: 480px) {
@@ -44,19 +45,8 @@
     justify-content: center;
     max-width: 829px;
 
-    @media screen and (max-width: 480px) {
-        padding: 6rem 0 2rem;
-        justify-content: flex-start;
-    }
-
-    @media screen and (min-width: 481px) and (max-width: 767px) {
-        padding: 6rem 0 2rem;
-        justify-content: flex-start;
-    }
-
     @media screen and (min-width: 768px) and (max-width: 1023px) {
         max-width: 100%;
-        padding: 5rem 0 1rem;
     }
 
     @media screen and (min-width: 1536px) {
@@ -150,18 +140,26 @@
     @media screen and (max-width: 480px) {
         flex-direction: column;
         gap: 0.75rem;
-        align-items: flex-start;
+        align-items: stretch;
+        width: 100%;
+        max-width: 320px;
     }
 
     @media screen and (min-width: 481px) and (max-width: 767px) {
         flex-direction: column;
         gap: 0.75rem;
-        align-items: flex-start;
+        align-items: stretch;
+        width: 100%;
+        max-width: 320px;
     }
 
     @media screen and (min-width: 768px) and (max-width: 1023px) {
         gap: 0.75rem;
     }
+}
+
+.hero-btn-group .button-action {
+    max-width: none;
 }
 
 .hero-bottom-wrapper {
@@ -582,11 +580,26 @@
     }
 
     @media screen and (min-width: 768px) and (max-width: 1023px) {
-        max-width: 50%;
+        max-width: 100%;
     }
 
     @media screen and (min-width: 1024px) and (max-width: 1279px) {
         max-width: 300px;
+    }
+}
+
+.opportunity-section-base .section-container__content-side {
+    @media screen and (max-width: 1023px) {
+        max-width: none;
+        width: 100%;
+    }
+}
+
+.opportunity-section-base .section-container__content-side .button-action,
+.candidate-section .section-container__content-side .button-action {
+    @media screen and (max-width: 767px) {
+        max-width: none;
+        width: 100%;
     }
 }
 
@@ -629,16 +642,12 @@
     }
 
     .section-container {
-        gap: 1.5rem !important;
+        gap: 1rem !important;
     }
 
     #feature-card-tag-group-d {
         height: auto;
         padding: 0.75rem 0.75rem 0;
-    }
-
-    .button-action.primary-cta {
-        max-width: none;
     }
 
     .feature-card {
@@ -652,6 +661,13 @@
     .testimonials-container-wrapper {
         padding-left: 0 !important;
     }
+
+    .opportunity-section-base .section-container,
+    .candidate-section .section-container,
+    .opportunity-section-base .section-container.reversed-container,
+    .candidate-section .section-container.reversed-container {
+        flex-direction: column-reverse;
+    }
 }
 
 @media screen and (min-width: 481px) and (max-width: 767px) {
@@ -664,7 +680,7 @@
     }
 
     .hero-content-wrapper {
-        justify-content: center;
+        justify-content: flex-start;
     }
 
     .hero-para {
@@ -692,16 +708,12 @@
     }
 
     .section-container {
-        gap: 2rem !important;
+        gap: 1.25rem !important;
     }
 
     #feature-card-tag-group-d {
         height: auto;
         padding: 1rem 1rem 0;
-    }
-
-    .button-action.primary-cta {
-        max-width: none;
     }
 
     .feature-card {
@@ -715,11 +727,18 @@
     .testimonials-container-wrapper {
         padding-left: 0 !important;
     }
+
+    .opportunity-section-base .section-container,
+    .candidate-section .section-container,
+    .opportunity-section-base .section-container.reversed-container,
+    .candidate-section .section-container.reversed-container {
+        flex-direction: column-reverse;
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     .section-container {
-        gap: 2rem !important;
+        gap: 1.75rem !important;
     }
 
     .why-choose-card {
@@ -729,6 +748,13 @@
 
     .feature-card {
         height: 100% !important;
+    }
+
+    .opportunity-section-base .section-container,
+    .candidate-section .section-container,
+    .opportunity-section-base .section-container.reversed-container,
+    .candidate-section .section-container.reversed-container {
+        flex-direction: column-reverse;
     }
 }
 
