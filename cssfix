@@ -1,0 +1,304 @@
+RK_User CSS AUDIT REPORT
+=========================
+Date: 2026-06-10
+Scope: All 33 CSS files + TSX components in RK_User/
+
+================================================================================
+1. CRITICAL: DUPLICATE HERO SECTION CSS (DRY VIOLATION)
+================================================================================
+
+The exact same `.hero-para-wrapper` / `.hero-para` block is duplicated across 
+12 page components with minor variations:
+
+Pattern A (`.hero-para-wrapper` with `border-left` + `margin: 2rem 0`):
+  - components/trends/trends.css:24-28
+  - components/trend-details/trend-details.css:24-28
+  - components/trend-and-cases/case-studies.css:24-28
+  - components/services/service.css:57-61
+  - components/organization/org.css:32-36
+  - components/opportunities/opportunities.css:32-36
+  - components/job-seekers/job-seekers.css:32-36
+  - components/contact-us/contact-us.css:32-36
+  - components/case-study-details/case-study-detail.css:35-39
+  - components/case-studies/all-case-studies.css:24-28
+  - components/candidates/candidates.css:32-36
+
+Pattern B (`.hero-para` with `border-left` + `margin` with responsive values):
+  - components/about/about.css:52-65 (uses single `margin: 2rem 0`, no MQ for margin)
+  - components/landing/landing.css:108-143 (uses granular MQs: margin varies per breakpoint)
+
+Pattern C (`.hero-para-wrapper` with `border-left` + `margin: 2rem 0` with extra `.hero-para` inside):
+  - This is the most common — 11 identical copies
+
+FIX: Create a shared `.hero-para-wrapper` class in globals.css and remove from 
+page-level CSS. Each component only needs to override if different.
+
+================================================================================
+2. CRITICAL: TWO DIFFERENT BREAKPOINT SYSTEMS
+================================================================================
+
+System A (Granular — 5 breakpoints) — used in:
+  globals.css, landing.css, footer.css, header.css, slider.css, 
+  vertical-slider.css, golden-section.css, section-frame.css, 
+  feat-card.css, candidate-card.css, button-action.css
+  Breakpoints: 480px, 767px, 1023px, 1279px, 1536px, 1920px
+
+System B (Simplified — 1-2 breakpoints) — used in:
+  trends.css, trend-details.css, case-studies.css, service.css, 
+  org.css, opportunities.css, job-seekers.css, contact-us.css, 
+  case-study-detail.css, all-case-studies.css, candidates.css, 
+  about.css, cookie-policy.css, input-field.css, tag-ui.css
+  Breakpoints: 600px, 767px, 768px, 1024px, 1025px
+
+PROBLEM: System A uses the granular approach with specific ranges like 
+"481-767px" and "768-1023px". System B uses a simpler "max-width: 767px" 
+approach. This creates gaps — e.g., at 600px some System B components 
+switch layout while System A components don't.
+
+RECOMMENDATION: Standardize on ONE breakpoint system across the entire 
+project. System A is more thorough but adds complexity. System B is simpler 
+but misses edge cases. Pick one and migrate.
+
+================================================================================
+3. IMAGE INCONSISTENCIES (CAUSE OF "ALL IMAGES NOT SAME")
+================================================================================
+
+3a. Image sizing strategies differ per component:
+
+  built-img (landing.css:246):         width: 100% (no max-width, no MQ)
+  work-with-img (landing.css:250):     width: 100% (no max-width, no MQ)
+  help-img (landing.css:254):          width: 100%, max-width: 497px
+  global-img (landing.css:259):        width: 100% (no max-width, no MQ)
+  candidate-img (candidate-card.css):  width: 100%, height: 190px, object-fit: scale-down
+  professional-img (about.css:67):     max-width: 434px (no width: 100% fallback!)
+  what-makes-img (about.css:99,105):   max-width: 100% (mobile) / max-width: 554px (desktop)
+  org-built-img (org.css:49):          max-width: 100% (no fixed width)
+  support-img (job-seekers.css:49):    max-width: 100% (on mobile: max-width: 54%, margin: auto)
+  dollar-img (globals.css:135):        width+height change per breakpoint (granular MQ)
+  footer-logo-img (footer.css:139):    width+height fixed, changes per MQ
+
+3b. Missing responsive behavior for images:
+  - built-img, work-with-img, global-img: NO media queries at all
+  - help-img: only has max-width: 497px, no mobile override
+  - professional-img: only has max-width: 434px -> 300px on mobile (no width:100% fallback)
+
+3c. Mix of `<img>` and CSS background-image approaches:
+  - Content images: Use Next.js `<Image>` with className + CSS sizing
+  - Hero images: ALL use CSS `background-image` (17 hero sections)
+  
+3d. Image aspect ratio not preserved consistently:
+  - candidate-img uses `object-fit: scale-down` with fixed height 190px (can letterbox)
+  - Section images (built-img etc.) use `width: 100%` without height — relies on intrinsic
+  - what-makes-img has no height at all (relies on Next.js Image aspect ratio)
+  - support-img has `margin: auto` + `max-width: 54%` on mobile (very different approach)
+
+ROOT CAUSE: No shared image component or consistent sizing strategy. Each 
+section defines its own image sizing rules independently.
+
+================================================================================
+4. MARGIN INCONSISTENCIES
+================================================================================
+
+4a. `margin: 2rem 0` — duplicated 12+ times across components (same rule):
+  trends.css:27, trend-details.css:27, case-studies.css:27, 
+  service.css:60, org.css:35, opportunities.css:35, 
+  job-seekers.css:35, contact-us.css:35, case-study-detail.css:38, 
+  all-case-studies.css:27, candidates.css:35, about.css:58
+
+4b. `margin-bottom: 8px` — duplicated 11 times:
+  trends.css:16, trend-details.css:16, case-studies.css:16, 
+  service.css:68, org.css:16, opportunities.css:16, 
+  job-seekers.css:16, contact-us.css:16, case-study-detail.css:27, 
+  all-case-studies.css:16, candidates.css:16
+
+4c. Mixed units (rem vs px):
+  Uses rem: .5rem, 1rem, 2rem, 1.25rem, 3.750rem, 1.563rem, 1.875rem
+  Uses px: 8px, 4px, 53px, 30px, 22px, 10px, 6px
+  No consistency between rem/px for similar spacing roles.
+
+4d. Responsive margin values differ per component:
+  landing.css `.hero-para`: 2rem -> 1.25rem(480) -> 1.5rem(767) -> 1.5rem(1023)
+  about.css `.hero-para`: 2rem (no responsive margin change)
+  All other pages: 2rem (no responsive margin change)
+
+================================================================================
+5. PADDING INCONSISTENCIES
+================================================================================
+
+5a. `.section-frame` (globals.css:18-45): 
+  padding: 0 1rem -> 3rem 1rem(480) -> 3.5rem 1.25rem(767) -> 4rem 2rem(1023) -> 0 2rem(1536)
+  Uses 5-level granular MQ system.
+
+5b. Section padding varies per page:
+  trends.css:           padding: 6rem 0
+  case-studies.css:     padding: 6rem 0
+  service.css:          padding: 2rem 0 (cards container)
+  org.css:              padding: 4rem 0
+  opportunities.css:    padding: 4rem 0
+  job-seekers.css:      padding: 4rem 0
+  about.css:            no padding defined on content sections (relies on section-base-bg)
+
+5c. Footer padding:
+  footer.css: padding: 3rem 0 -> 2rem 0(480) -> 2.5rem 0(767) -> 4rem 0(1536)
+
+No standard section vertical spacing is used.
+
+================================================================================
+6. GOLDEN BORDER GRADIENT DUPLICATION
+================================================================================
+
+The gradient border pattern is duplicated ~15 times:
+```
+border: 1px solid transparent;
+background:
+    linear-gradient(#000, #000) padding-box,
+    linear-gradient(to right, #C29226, #B27D0F, #D9B14A, 
+                    #FADE7B, #DAB74F, #C7972B) border-box;
+border-radius: 10px;
+```
+
+Appears in: feat-card.css, candidate-card.css, case-study-card.css,
+service-card-box.css, detail-card.css, premium-card.css, 
+contact-us.css (4 times), opportunities.css (filter base),
+and more.
+
+FIX: Create a CSS class or mixin for `.golden-border` to reduce duplication.
+
+================================================================================
+7. TEXT GRADIENT DUPLICATION
+================================================================================
+
+The gradient text pattern is duplicated ~12 times:
+```
+background-image: var(--primary-text-color);
+background-clip: text;
+-webkit-background-clip: text;
+text-fill-color: transparent;
+-webkit-text-fill-color: transparent;
+```
+
+Already partially abstracted as `.section-gradient-heading` in globals.css:60,
+but many components define their own version instead of reusing it.
+
+================================================================================
+8. HERO SECTION BACKGROUND IMAGES
+================================================================================
+
+17 unique hero background images, one per page:
+  /landing-hero-bg.png
+  /section-bg.png (used by multiple sections)
+  /about/about-hero-bg.png
+  /candidates/candidate-hero-bg.png
+  /case-study/case-study-hero-bg.png
+  /case-study/all-case-study-hero-bg.png
+  /case-study/case-study-details-hero-bg.png
+  /contact-us/contact-hero-bg.png
+  /job-seekers/job-seekers-hero-bg.png
+  /opportunities/opportunity-hero-bg.png
+  /org/org-hero-bg.png
+  /service/service-hero-bg.png
+  /trends/trend-hero-bg.png
+  /trends/trend-details-hero-bg.png
+  + premium-card-bg.svg, premium-card-top.svg
+
+Each has its own height/max-height values (520px, 590px, 700px etc.)
+
+================================================================================
+9. RESPONSIVE GRID LAYOUT INCONSISTENCIES
+================================================================================
+
+Grid column breakpoints differ:
+  why-choose-card-container: 6col -> 3col(1024) -> 3col(768) -> 2col(767) -> 1col(480)
+  all-trends-card-wrapper:   3col -> 1col(600)
+  all-case-studies-card-wrapper: 3col (no mobile breakpoint!)
+  service-cards-container:   3col -> 1col(600)
+  opportunities-card-wrapper: 3col -> 1col(600)
+  candidate-card-wrapper:    3col -> 1col(600)
+  how-support-path-card-wrapper: 2col -> 1col(600)
+  case-studies path:         3col -> auto(767)
+
+Some use `600px` as mobile breakpoint, others use `480px`, `767px`.
+all-case-studies-card-wrapper has NO mobile breakpoint at all.
+
+================================================================================
+10. TAILWIND vs CUSTOM CSS USAGE
+================================================================================
+
+Most TSX components use custom CSS for margins. Some use Tailwind:
+  mb-0!, mb-4, mt-2 sm:mt-0, mb-2, mt-4, mb-1, mt-60
+  (Found in: Built.tsx, Candidate.tsx, Opportunity.tsx, Global.tsx, 
+   Support.tsx, WhoThis.tsx, ForJob.tsx, DetailSection.tsx, HeroSection.tsx)
+
+No consistent convention for when to use Tailwind vs custom CSS for spacing.
+
+================================================================================
+RECOMMENDED ACTIONS (PRIORITY ORDER)
+================================================================================
+
+P1 — Create shared CSS utilities:
+  - `.hero-para-wrapper` shared class (eliminates 11 duplicates)
+  - `.golden-border` shared class (eliminates 15+ duplicates)
+  - `.section-content-para` with responsive font sizing (already exists but 
+     not used consistently)
+
+P2 — Standardize breakpoint system:
+  - Pick either granular (A) or simplified (B) and migrate all files
+  - Define breakpoints as CSS custom properties or preprocessor variables
+
+P3 — Fix image sizing:
+  - Create a shared `.section-img` class with `width: 100%; height: auto;`
+  - Add responsive max-width per breakpoint consistently
+  - Use `object-fit` consistently for card images
+  - Ensure all `<Image>` components have consistent className patterns
+
+P4 — Standardize vertical spacing:
+  - Create CSS variables: --section-padding-y, --card-gap, --hero-margin
+  - Use consistently across all page components
+  - Migrate all px values to rem/em
+
+P5 — Fix grid responsive breakpoints:
+  - all-case-studies-card-wrapper needs a mobile breakpoint
+  - Standardize grid column breakpoints across all card wrappers
+  - Use consistent breakpoint (600px or 767px or 480px) for mobile stack
+
+P6 — Hero section height standardization:
+  - Standardize max-height values across hero sections
+  - Currently ranges from 520px to 700px inconsistently
+  - Create a utility class for hero section sizing
+
+================================================================================
+FULL CSS FILE LIST (33 files)
+================================================================================
+1.  app/globals.css
+2.  components/about/about.css
+3.  components/candidates/candidates.css
+4.  components/case-studies/all-case-studies.css
+5.  components/case-study-details/case-study-detail.css
+6.  components/contact-us/contact-us.css
+7.  components/cookie-policy/cookie-policy.css
+8.  components/golden-section/golden-section.css
+9.  components/job-seekers/job-seekers.css
+10. components/job-seekers/slider.css
+11. components/landing/landing.css
+12. components/landing/slider.css
+13. components/landing/vertical-slider.css
+14. components/layout/footer.css
+15. components/layout/header.css
+16. components/opportunities/opportunities.css
+17. components/organization/org.css
+18. components/services/service.css
+19. components/trend-and-cases/case-studies.css
+20. components/trend-details/trend-details.css
+21. components/trends/trends.css
+22. ui/buttons/button-action.css
+23. ui/candidate-card/candidate-card.css
+24. ui/case-study-card/case-study-card.css
+25. ui/details-card/detail-card.css
+26. ui/feat-card/feat-card.css
+27. ui/input/input-field.css
+28. ui/premium-card/premium-card.css
+29. ui/section/section-frame.css
+30. ui/service-card/service-card-box.css
+31. ui/tag/tag-ui.css
+32. ui/trend-card/trend-card.css
+33. components/cookie-policy/cookie-policy.css
