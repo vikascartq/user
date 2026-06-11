@@ -43,7 +43,16 @@ export default function CoverflowSlider({ list, renderSlide }: CoverflowSliderPr
                         modifier: 1.5,
                     },
                 },
-                1024: {
+                768: {
+                    direction: "horizontal",
+                    slidesPerView: 1.35,
+                    spaceBetween: 18,
+                    coverflowEffect: {
+                        depth: 110,
+                        modifier: 1.4,
+                    },
+                },
+                1280: {
                     direction: "horizontal",
                     slidesPerView: 3,
                     spaceBetween: 20,

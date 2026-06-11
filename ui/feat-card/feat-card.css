@@ -28,6 +28,12 @@
         max-width: 100%;
     }
 
+    @media screen and (min-width: 1024px) and (max-width: 1279px) {
+        height: auto;
+        min-height: 210px;
+        max-width: 460px;
+    }
+
     @media screen and (min-width: 1536px) {
         max-width: 620px;
         height: 220px;
@@ -55,6 +61,10 @@
         font-size: 18px;
     }
 
+    @media screen and (min-width: 1024px) and (max-width: 1279px) {
+        font-size: 19px;
+    }
+
     @media screen and (min-width: 1536px) {
         font-size: 24px;
     }
@@ -78,6 +88,10 @@
     }
 
     @media screen and (min-width: 768px) and (max-width: 1023px) {
+        font-size: 15px;
+    }
+
+    @media screen and (min-width: 1024px) and (max-width: 1279px) {
         font-size: 15px;
     }
 
@@ -112,6 +126,13 @@
         gap: 0.5rem;
     }
 
+    @media screen and (min-width: 1024px) and (max-width: 1279px) {
+        padding: 0.875rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.625rem;
+    }
+
     @media screen and (min-width: 1536px) {
         padding: 1.25rem;
     }
@@ -129,6 +150,10 @@
         max-width: none;
         width: 100%;
     }
+
+    @media screen and (min-width: 1024px) and (max-width: 1279px) {
+        max-width: 170px;
+    }
 }
 
 .feature-card-tag-group {
@@ -142,6 +167,10 @@
 
     @media screen and (max-width: 480px) {
         gap: 6px;
+        max-width: 100%;
+    }
+
+    @media screen and (min-width: 1024px) and (max-width: 1279px) {
         max-width: 100%;
     }
 
@@ -171,6 +200,11 @@
 
     @media screen and (min-width: 768px) and (max-width: 1023px) {
         font-size: 12px;
+    }
+
+    @media screen and (min-width: 1024px) and (max-width: 1279px) {
+        font-size: 12px;
+        padding: 3px 7px;
     }
 
     @media screen and (min-width: 1536px) {

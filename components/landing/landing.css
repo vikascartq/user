@@ -584,12 +584,18 @@
     }
 
     @media screen and (min-width: 1024px) and (max-width: 1279px) {
-        max-width: 300px;
+        max-width: none;
+        width: 100%;
     }
 }
 
 .opportunity-section-base .section-container__content-side {
     @media screen and (max-width: 1023px) {
+        max-width: none;
+        width: 100%;
+    }
+
+    @media screen and (min-width: 1024px) and (max-width: 1279px) {
         max-width: none;
         width: 100%;
     }
@@ -759,6 +765,34 @@
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1279px) {
+    .opportunity-section-base .section-container,
+    .candidate-section .section-container,
+    .opportunity-section-base .section-container.reversed-container,
+    .candidate-section .section-container.reversed-container {
+        flex-direction: column-reverse;
+        gap: 1.5rem;
+    }
+
+    .opportunity-section-base .section-container__img-side,
+    .candidate-section .section-container__img-side {
+        max-width: 100%;
+    }
+
+    .opportunity-section-base .section-content-title-wrapper,
+    .candidate-section .section-content-title-wrapper {
+        margin-bottom: 0.75rem;
+    }
+
+    .opportunity-section-base .section-content-para,
+    .candidate-section .section-content-para {
+        max-width: 100%;
+    }
+
+    .opportunity-section-base .button-action,
+    .candidate-section .button-action {
+        max-width: 320px;
+    }
+
     .why-choose-card {
         text-align: center;
         align-items: center;
