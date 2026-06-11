@@ -18,14 +18,14 @@ export default function VerticalCoverflow({ list, renderSlide }: VerticalCoverFl
             slidesPerView={3}
             loop={true}
             autoplay={{
-                delay: 2000,
+                delay: 3000,
                 disableOnInteraction: false,
                 pauseOnMouseEnter: true,
             }}
             coverflowEffect={{
                 rotate: 0,
                 stretch: 0,
-                depth: 150,
+                depth: 200,
                 modifier: 2.5,
                 slideShadows: false,
             }}
@@ -58,7 +58,7 @@ export default function VerticalCoverflow({ list, renderSlide }: VerticalCoverFl
                     },
                 },
                 1280: {
-                    direction: "horizontal",
+                    direction: "vertical",
                     slidesPerView: 3,
                     spaceBetween: 20,
                     coverflowEffect: {
@@ -68,7 +68,7 @@ export default function VerticalCoverflow({ list, renderSlide }: VerticalCoverFl
                 },
             }}
             modules={[EffectCoverflow, Autoplay]}
-            className="myJobSwiper"
+            className="myVerticalSwiper"
         >
             {list.map((item, index) => (
                 <SwiperSlide key={index}>

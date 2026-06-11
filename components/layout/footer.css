@@ -1,7 +1,7 @@
 footer {
-    display: flex;
+     display: flex;
     padding: 3rem 0;
-
+    align-items: flex-start;
     @media screen and (max-width: 480px) {
         flex-direction: column;
         gap: 1.5rem;
@@ -40,6 +40,7 @@ footer {
 
 .footer-col {
     flex: 1;
+ 
 
     &:nth-child(1) {
         display: flex;
@@ -272,7 +273,8 @@ footer {
 }
 
 .footer-second-col {
-    margin-top: 53px;
+     
+    
 
     @media screen and (max-width: 480px) {
         margin-top: 0;

@@ -16,7 +16,7 @@ export default function Footer() {
             <div className="footer-base">
                 <div className="section-frame">
                     <footer>
-                        <div className="footer-col">
+                        <div className="footer-col" >
                             <Image src={"/logo.png"} alt="built" className="footer-logo-img" width={400} height={400} />
                             <p className="footer-about">We understand the people demands behind high-growth financial services businesses and connect the right talent where it matters most.</p>
                             <div className="footer-connect-line-wrap">
@@ -59,7 +59,7 @@ export default function Footer() {
                         </div>
                         <div className="footer-col footer-second-col">
                             <h4>Trends & Cases</h4>
-                            <ul>
+                            <ul >
                                 <li>
                                     <Link href={"/trend-and-cases"} className={pathname === "/trend-and-cases" ? "f-active" : ""}>Trends and Case</Link>
                                 </li>
@@ -83,7 +83,7 @@ export default function Footer() {
                                 </li>
                             </ul>
                         </div>
-                        <div className="footer-col">
+                        <div className="footer-col  mt-22">
                             <h4>Location</h4>
                             <ul>
                                 <li className="flex items-center gap-x-2">

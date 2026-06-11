@@ -61,3 +61,66 @@
         opacity: 1;
     }
 }
+
+.myVerticalSwiper {
+    width: 100%;
+    height: 500px;
+
+    @media screen and (max-width: 480px) {
+        height: 280px;
+    }
+
+    @media screen and (min-width: 481px) and (max-width: 767px) {
+        height: 300px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        height: 220px;
+    }
+
+    @media screen and (min-width: 1024px) and (max-width: 1279px) {
+        height: 420px;
+    }
+
+    @media screen and (min-width: 1536px) {
+        height: 550px;
+    }
+}
+
+.slide {
+    height: 150px;
+    background: #222;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+/* Default (top & bottom slides) */
+.swiper-slide {
+    transform: scale(0.8);
+    opacity: 0.6;
+}
+
+/* Center slide */
+.swiper-slide-active {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* Slightly bigger than others (optional polish) */
+.swiper-slide-prev,
+.swiper-slide-next {
+    transform: scale(0.85);
+}
+.myVerticalSwiper .swiper-slide {
+    opacity: 1 !important;
+}
+
+.myVerticalSwiper .swiper-slide-active,
+.myVerticalSwiper .swiper-slide-prev,
+.myVerticalSwiper .swiper-slide-next {
+    opacity: 1 !important;
+}
