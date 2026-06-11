@@ -24,7 +24,7 @@ export default function FeatureCard({ title, location, tags, onApply, type, resp
     const effectiveType = responsiveType && isMounted && screenWidth <= 767 ? "type2" : type;
 
     return (
-        <div className="feature-card">
+        <div className="feature-card ">
             <div className="feature-card-content">
                 <div className="feature-card-title-wrapper">
                     <h4 className="feature-card-title"><GreenDotIcon /> <span>{title}</span></h4>

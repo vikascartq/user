@@ -7,12 +7,12 @@ export default function Built() {
             <SectionFrame
                 type={"default"}
                 imgNode={
-                    <Image src={"/built.png"} alt="built" className="built-img" width={400} height={400} />
+                    <Image src={"/built.png"} alt="built" className="built-img mb-5" width={400} height={400} />
                 }
                 contentNode={
                     <>
                         <div className="section-content-title-wrapper sm-pb-1-4">
-                            <Image src={"/dollar.svg"} alt="dollar" className="dollar-img" width={30} height={30} />
+                            <Image src={"/dollar.svg"} alt="dollar" className="dollar-img " width={30} height={30} />
                             <div >
                                 <h2 className="section-content-title">Built for growth under</h2>
                                 <h2 className="section-content-title"><span> pressure</span></h2>

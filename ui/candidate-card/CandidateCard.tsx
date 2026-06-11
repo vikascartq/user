@@ -7,7 +7,7 @@ export default function CandidateCard({ title, description, tags, onContact, ima
             <Image src={`/candidates/${imageName}.png`} alt="candidate" className="candidate-img" width={200} height={200} />
             <div>
                 <h4 className="candidate-card-title">{title}</h4>
-                <p className="candidate-card-description">{description}</p>
+                <p className="candidate-card-description pt-2">{description}</p>
             </div>
             <div className="candidate-card-tag-group">
                 {tags.map((tag, index) => (

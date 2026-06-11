@@ -10,12 +10,12 @@ export default function GoldenSection({
     return (
         <div className="golden-section-base">
             <div className="section-frame">
-                <div className="golden-section-container">
-                    <div className="golden-section-header">
-                        <h4>{title}</h4>
+                <div className="golden-section-container flex flex-between align-center m-10 ">
+                    <div className="golden-section-header mb-10">
+                        <h4 className="md:text-nowrap" >{title}</h4>
                     </div>
-                    <div className="golden-section-content">
-                        <p>{para}</p>
+                    <div className="golden-section-content mb-10 leading-normal ">
+                        <p className="leading-normal">{para}</p>
                         {
                             para2 &&
                             <p>{para2}</p>

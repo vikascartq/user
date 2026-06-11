@@ -22,7 +22,7 @@ export default function Opportunity() {
                                 title={opportunity.name}
                                 location={opportunity.location}
                                 tags={opportunity.skills}
-                                onApply={() => { }}
+                                onApply={() => { router.push("/opportunities") }}
                                 type="type1"
                                 responsiveType={true}
                             />

@@ -23,7 +23,7 @@ export default function Candidate() {
                                 title={candidate?.role}
                                 description={candidate?.description}
                                 tags={candidate?.skills}
-                                onContact={() => { }}
+                                onContact={() => {router.push("/contact-us") }}
                                 imageName={candidate?.imageName}
                             />
                         )}

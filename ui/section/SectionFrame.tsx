@@ -6,9 +6,9 @@ export default function SectionFrame({
 }: SectionFrameProps) {
     return (
         <>
-            <div className="section-frame">
+            <div className="section-frame ">
                 <div className={`section-container ${type === "reverse" ? "reversed-container" : ""}`}>
-                    <div className="section-container__img-side">{imgNode}</div>
+                    <div className="section-container__img-side  pb-10">{imgNode}</div>
                     <div className="section-container__content-side">{contentNode}</div>
                 </div>
             </div>
