@@ -58,7 +58,7 @@ export default function Footer() {
 
                         </div>
                         <div className="footer-col footer-second-col">
-                            <h4>Trends & Cases</h4>
+                            <h4 className="md:mr-15">Trends & Cases</h4>
                             <ul >
                                 <li>
                                     <Link href={"/trend-and-cases"} className={pathname === "/trend-and-cases" ? "f-active" : ""}>Trends and Case</Link>
